@@ -80,8 +80,15 @@ if (!isNil "_exists" && {_exists}) then
 					_veh setVariable ["A3W_objectTextures", _objTextures, true];
 				};
 
-				{ _veh setVariable [_x select 0, _x select 1] } forEach _variables;
+				{ _veh setVariable [_x select 0, _x select 1, true] } forEach _variables; // Added true for vehicle locking.
 
+			
+				// If vehicle is owned by a player, lock it and make it untowable/unliftable Cael817
+				if (!isNil {_veh getVariable "ownerUID"}) then {
+					_veh lock 2;
+					_veh setVariable ["R3F_LOG_disabled",true,true];
+				};
+							
 				clearWeaponCargoGlobal _veh;
 				clearMagazineCargoGlobal _veh;
 				clearItemCargoGlobal _veh;

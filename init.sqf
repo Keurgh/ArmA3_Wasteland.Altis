@@ -62,3 +62,7 @@ if (isServer) then
 [] execVM "addons\proving_ground\init.sqf";
 [] execVM "addons\scripts\DynamicWeatherEffects.sqf";
 [] execVM "addons\JumpMF\init.sqf";
+[] execVM "addons\atm\bank_init.sqf";					// ATM script
+[] execVM "addons\laptop\init.sqf";						// Addon for hack laptop mission
+
+[] execVM "addons\scripts\intro.sqf";					// Show intro text

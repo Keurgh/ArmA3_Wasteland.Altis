@@ -300,6 +300,21 @@ while {true} do
 						_variables pushBack ["ownerUID", _owner];
 					};
 
+					//Just for getting a name in the save
+					_vehOwnerName = _veh getVariable ["vehOwnerName", ""];
+
+					if !(_vehOwnerName in [""]) then
+					{
+						_variables pushBack ["vehOwnerName", _vehOwnerName];
+					};
+					//Invited Drivers
+					_vehDriverUID = _veh getVariable ["vehDriverUID", ""];
+
+					if !(_vehDriverUID in [""]) then
+					{
+						_variables pushBack ["vehDriverUID", _vehDriverUID];
+					};
+
 					switch (true) do
 					{
 						case _purchasedVehicle:
@@ -355,6 +370,7 @@ while {true} do
 
 						_turrets = _turrets - [1];
 					};
+
 
 					{
 						_path = _x;
