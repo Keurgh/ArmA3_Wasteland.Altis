@@ -7,17 +7,18 @@
 if (!isServer) exitwith {};
 #include "patrolMissionDefines.sqf";
 
-private ["_convoyVeh","_veh1","_veh2","_veh3","_veh4","_veh5","_veh6","_routes","_rn","_createVehicle1","_createVehicle2","_createVehicle3","_vehicles", "_leader", "_speedMode", "_waypoint", "_vehicleName", "_numWaypoints", "_cash", "_box1", "_box2", "_box3"];
+private ["_convoyVeh","_veh1","_veh2","_veh3","_veh4","_veh5","_veh6","_createVehicle1","_createVehicle2","_createVehicle3","_vehicles", "_leader", "_speedMode", "_waypoint", "_vehicleName", "_numWaypoints", "_cash", "_box1", "_box2", "_box3"];
 
 _setupVars =
 {
 	_missionType = "Airport Patrol";
-	_locationsArray = nil;
+	_locationsArray = PatrolConvoyPaths;
 };
 
 _setupObjects =
 {
 	private ["_starts", "_startDirs", "_waypoints"];
+	call compile preprocessFileLineNumbers format ["mapConfig\convoys\%1.sqf", _missionLocation];
 	
 	// Pick the vehicles for the patrol. Only one set at the moment. Will add more later.
 	_convoyVeh = 
@@ -33,125 +34,6 @@ _setupObjects =
 	_veh5 = _convoyVeh select 4;
 	_veh6 = _convoyVeh select 5;
 
-	// Available routes to add a route. Only one at the moment. Will add more later.
-	_routes = [1];
-	
-	// pick one of the routes
-	_rn = _routes call BIS_fnc_selectRandom;
-
-	// set starts and waypoints depending on above (random) choice
-	switch (_rn) do 
-	{ 
-		case 1: {
-			// route 1
-			// starting positions for this route
-			_starts = 
-			[
-				[14877.2, 16706.5],
-				[14882.9, 16712.7],
-				[14896.1, 16713.4],
-				[14889.5, 16718.3],
-				[14883.1, 16701.4],
-				[14890, 16707]
-			];
-			// starting directions in which the vehicles are spawned on this route
-			_startDirs = 
-			[
-				-133,
-				-133,
-				-133,
-				-133,
-				-133,
-				-133
-			];
-			// the routes
-			_waypoints = 
-			[
-				[14574.4, 16388.7],
-				[14233.3, 16407.1],
-				[14108.7, 16246.8],
-				[14037.4, 15784.8],
-				[14271.9, 15620.1],
-				[14939.5, 16285.5],
-				[15671.1, 17047.1],
-				[15260.5, 17465.7],
-				[14919.1, 17124.3],
-				[14981.6, 16809],
-				[14877.2, 16706.5],
-				[14574.4, 16388.7],
-				[14233.3, 16407.1],
-				[14108.7, 16246.8],
-				[14037.4, 15784.8],
-				[14271.9, 15620.1],
-				[14939.5, 16285.5],
-				[15671.1, 17047.1],
-				[15260.5, 17465.7],
-				[14919.1, 17124.3],
-				[14877.2, 16706.5],
-				[14574.4, 16388.7],
-				[14233.3, 16407.1],
-				[14108.7, 16246.8],
-				[14037.4, 15784.8],
-				[14271.9, 15620.1],
-				[14939.5, 16285.5],
-				[15671.1, 17047.1],
-				[15260.5, 17465.7],
-				[14919.1, 17124.3],
-				[14877.2, 16706.5],
-				[14574.4, 16388.7],
-				[14233.3, 16407.1],
-				[14108.7, 16246.8],
-				[14037.4, 15784.8],
-				[14271.9, 15620.1],
-				[14939.5, 16285.5],
-				[15671.1, 17047.1],
-				[15260.5, 17465.7],
-				[14919.1, 17124.3]
-			];
-			// end of route one
-		}; 
-		default {
-			// this shouldnt happen but just to be sure..
-			diag_log format["WASTELAND SERVER - WARNING! %1 encountered an error selecting routes - defaulting to route 1", _missionType];
-			// route 1
-			// starting positions for this route
-			_starts = 
-			[
-				[14877.2, 16706.5],
-				[14882.9, 16712.7],
-				[14896.1, 16713.4],
-				[14889.5, 16718.3],
-				[14883.1, 16701.4],
-				[14890, 16707]
-			];
-			// starting directions in which the vehicles are spawned on this route
-			_startDirs = 
-			[
-				-133,
-				-133,
-				-133,
-				-133,
-				-133,
-				-133
-			];
-			// the routes
-			_waypoints = 
-			[
-				[14574.4, 16388.7],
-				[14233.3, 16407.1],
-				[14108.7, 16246.8],
-				[14037.4, 15784.8],
-				[14271.9, 15620.1],
-				[14939.5, 16285.5],
-				[15671.1, 17047.1],
-				[15260.5, 17465.7],
-				[14919.1, 17124.3],
-				[14981.6, 16809]
-			];
-			// end of route one
-		}; 
-	}; 
-	
 	_createVehicle1 = {
 		private ["_type","_position","_direction","_vehicle","_soldier"];
 		
