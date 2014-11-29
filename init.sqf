@@ -64,5 +64,6 @@ if (isServer) then
 [] execVM "addons\JumpMF\init.sqf";
 [] execVM "addons\atm\bank_init.sqf";					// ATM script
 [] execVM "addons\laptop\init.sqf";						// Addon for hack laptop mission
+[] execVM "addons\EtV\init.sqf";						// Explosives to vehicles
 
 [] execVM "addons\scripts\intro.sqf";					// Show intro text
