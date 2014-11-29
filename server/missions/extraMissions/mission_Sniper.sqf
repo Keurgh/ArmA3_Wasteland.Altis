@@ -19,12 +19,6 @@ _setupVars =
 
 _setupObjects =
 {
-	_boxes1 = ["Box_East_WpsSpecial_F","Box_IND_WpsSpecial_F"];
-	_currBox1 = _boxes1 call BIS_fnc_selectRandom;
-	_box1 = createVehicle [_currBox1,[(_missionPos select 0), (_missionPos select 1),0],[], 0, "NONE"];
-	_box1 allowDamage false;
-	_box1 setVariable ["R3F_LOG_disabled", true, true];
-
 	_aiGroup = createGroup CIVILIAN;
 	[_aiGroup,_missionPos] spawn createsniperGroup;
 
@@ -47,7 +41,12 @@ _failedExec =
 _successExec =
 {
 	// Mission completed
-	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1];
+	
+	_boxes1 = ["Box_East_WpsSpecial_F","Box_IND_WpsSpecial_F"];
+	_currBox1 = _boxes1 call BIS_fnc_selectRandom;
+	_box1 = createVehicle [_currBox1, _lastPos, [], 2, "None"];
+	_box1 allowDamage false;
+	_box1 setVariable ["R3F_LOG_disabled", false, true];
 
 	_successHintMessage = format ["The snipers are dead! Well Done!"];
 };
