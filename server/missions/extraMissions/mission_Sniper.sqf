@@ -35,7 +35,6 @@ _waitUntilCondition = nil;
 _failedExec =
 {
 	// Mission failed
-	{ deleteVehicle _x } forEach [_box1];
 };
 
 _successExec =
