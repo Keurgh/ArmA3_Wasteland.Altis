@@ -11,24 +11,20 @@ _role1 = "Welcome to NL United Tank'n'Spank Dutch Altis A3Wasteland";
 _role1names = ["This server is under continuous configuration. We are doing our best to keep maintenance restarts to a minimum.","Please understand that database resets and errors can occur."];
 _role2 = "Server Owners";
 _role2names = ["LouD - Craven"];
-_role3 = "Server Restarts";
-_role3names = ["This server restarts at 06.00, 12.00, 18.00 and 24.00 hours CET.","Type !time in Global Chat to see the system time.","Type !upt in Global Chat to see server uptime."];
-_role4 = "Links";
-_role4names = ["Web and forum: http://www.nl-united.nl","Teamspeak: ts.nl-united.nl (Primary language Dutch)"];
-_role5 = "Feedback";
-_role5names = ["Please report any bugs/feedback on our website forum"];
-_role6 = "Object saving";
-_role6names = ["Objects are saved for 5 days maximum. This includes baseparts and crates. If you resave them 5 new days start."];
-_role7 = "Vehicle saving";
-_role7names = ["Vehicles are automaticly saved when bought from stores or won from missions. They remain on the server if used at least once every 48 hours."];
-_role8 = "Vehicle ownership";
-_role8names = ["Bought vehicles are owned by the buyer.","Ownership of found and mission vehicles can be changed for a price at the change ownership points."];
-_role9 = "Vehicle locking";
-_role9names = ["Vehicles that are bought and owned can only be locked by the owner.","Owned vehicles spawn in locked after a restart.","All locked vehicles can be broken in to by anyone with the right tools."];
-_role10 = "Pretty Please";
-_role10names = ["Understand that this is an alpha mission and we added stuff ourselves that isn't vanilla so don't blame the devs for the odds and ends."];
-_role11 = "Earplugs";
-_role11names = ["The Earplugs script is now bound to the End key. So press the End key to put them in and take them out."];
+_role3 = "Links";
+_role3names = ["Web and forum: http://www.nl-united.nl","Teamspeak: ts.nl-united.nl (Primary language Dutch)"];
+_role4 = "Feedback";
+_role4names = ["Please report any bugs/feedback on our website forum"];
+_role5 = "Object saving";
+_role5names = ["Objects are saved for 5 days maximum. This includes baseparts and crates. If you resave them 5 new days start."];
+_role6 = "Vehicle saving";
+_role6names = ["Vehicles are automaticly saved when bought from stores or won from missions. They remain on the server if used at least once every 48 hours."];
+_role7 = "Vehicle ownership";
+_role7names = ["Bought vehicles are owned by the buyer.","Ownership of found and mission vehicles can be changed for a price at the change ownership points."];
+_role8 = "Vehicle locking";
+_role8names = ["Vehicles that are bought and owned can only be locked by the owner.","Owned vehicles spawn in locked after a restart.","All locked vehicles can be broken in to by anyone with the right tools."];
+_role9 = "Earplugs";
+_role9names = ["The Earplugs script is bound to the End key. Press the End key to put them in and take them out."];
 
 {
 sleep 2;
@@ -57,7 +53,5 @@ sleep (_onScreenTime);
 [_role6, _role6names],
 [_role7, _role7names],
 [_role8, _role8names],
-[_role9, _role9names],
-[_role10, _role10names],
-[_role11, _role11names]
+[_role9, _role9names]
 ];
