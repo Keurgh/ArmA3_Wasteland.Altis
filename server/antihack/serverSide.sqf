@@ -26,7 +26,27 @@ while { true } do
 		{
 			_unit = _x;
 
-			if (owner _unit > _serverID) then
+      private["_hcList", "_unitID"];
+      _hcList = [];
+      _unitID = owner _unit;
+
+      if (not(isNil "headlessclient")) then {
+        _hcList pushBack (owner headlessclient);
+      };
+
+      if (_unitID == _serverID && {count(_hcList) > 0}) then {
+        [_unit, (_hcList select 0)] spawn {
+          private["_unit", "_hcID"];
+          _unit = _this select 0;
+          _hcID = _this select 1;
+
+          sleep 10; //add a delay to give time for addweapon, and addunitform commands
+          if ((owner _unit) == _hcID) exitWith {};
+          _unit setOwner _hcID;
+        };
+      };
+
+			if (_unitID > _serverID && {not(_unitID in _hcList)}) then
 			{
 				if (alive _unit && !isPlayer _unit && {getText (configFile >> "CfgVehicles" >> typeOf _unit >> "simulation") != "UAVPilot"}) then
 				{
@@ -46,6 +66,8 @@ while { true } do
 					deleteVehicle _unit;
 				};
 			};
+
+
 		} forEach (allUnits - playableUnits);
 	};
 
