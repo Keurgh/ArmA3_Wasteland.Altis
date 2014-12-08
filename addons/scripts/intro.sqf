@@ -25,6 +25,8 @@ _role8 = "Vehicle locking";
 _role8names = ["Vehicles that are bought and owned can only be locked by the owner.","Owned vehicles spawn in locked after a restart.","All locked vehicles can be broken in to by anyone with the right tools."];
 _role9 = "Earplugs";
 _role9names = ["The Earplugs script is bound to the End key. Press the End key to put them in and take them out."];
+_role10 = "ATM / Bank";
+_role10names = ["As at TEST, ATM's no longer show on the map. You can now use ANY atm found in Altis. Have fun :). We might revert back to just 7 ATM's."];
 
 {
 sleep 2;
@@ -53,5 +55,6 @@ sleep (_onScreenTime);
 [_role6, _role6names],
 [_role7, _role7names],
 [_role8, _role8names],
-[_role9, _role9names]
+[_role9, _role9names],
+[_role10, _role10names]
 ];
