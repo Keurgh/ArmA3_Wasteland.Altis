@@ -2480,7 +2480,6 @@ class Mission
 			vehicle="Land_Atm_02_F";
 			skill=0.60000002;
 			text="ATM1";
-			init="this addAction [""Use ATM"", ""addons\atm\ATM.sqf""];";
 			description="Player ATM";
 		};
 		class Item25
@@ -2492,7 +2491,6 @@ class Mission
 			vehicle="Land_Atm_02_F";
 			skill=0.60000002;
 			text="ATM3";
-			init="this addAction [""Use ATM"", ""addons\atm\ATM.sqf""];";
 			description="Player ATM";
 		};
 		class Item26
@@ -2504,7 +2502,6 @@ class Mission
 			vehicle="Land_Atm_02_F";
 			skill=0.60000002;
 			text="ATM7";
-			init="this addAction [""Use ATM"", ""addons\atm\ATM.sqf""];";
 			description="Player ATM";
 		};
 		class Item27
@@ -2516,7 +2513,6 @@ class Mission
 			vehicle="Land_Atm_02_F";
 			skill=0.60000002;
 			text="ATM6";
-			init="this addAction [""Use ATM"", ""addons\atm\ATM.sqf""];";
 			description="Player ATM";
 		};
 		class Item28
@@ -2528,7 +2524,6 @@ class Mission
 			vehicle="Land_Atm_02_F";
 			skill=0.60000002;
 			text="ATM5";
-			init="this addAction [""Use ATM"", ""addons\atm\ATM.sqf""];";
 			description="Player ATM";
 		};
 		class Item29
@@ -2541,7 +2536,6 @@ class Mission
 			vehicle="Land_Atm_02_F";
 			skill=0.60000002;
 			text="ATM2";
-			init=";this setpos [20797.5,6663.21,0];this addAction [""Use ATM"", ""addons\atm\ATM.sqf""];";
 			description="Player ATM";
 		};
 		class Item30
@@ -2554,7 +2548,6 @@ class Mission
 			vehicle="Land_Atm_02_F";
 			skill=0.60000002;
 			text="ATM4";
-			init="this addAction [""Use ATM"", ""addons\atm\ATM.sqf""];";
 			description="Player ATM";
 		};
 		class Item31
@@ -3306,7 +3299,7 @@ class Mission
 		class Item105
 		{
 			position[]={23893.209,3.1900001,17517.209};
-			azimut=216.91876;
+			azimut=216.91901;
 			id=270;
 			side="EMPTY";
 			vehicle="Land_Mil_WallBig_4m_F";
@@ -3516,12 +3509,13 @@ class Mission
 		class Item126
 		{
 			position[]={23743.838,3.1900001,17362.211};
-			azimut=400.8938;
+			azimut=400.89401;
 			id=291;
 			side="EMPTY";
 			vehicle="Land_Atm_01_F";
 			skill=0.40000001;
-			init="this addAction [""Use ATM"", ""addons\atm\ATM.sqf""];this setpos [23743.838, 17362.211, 0.5];";
+			text="AdminATM";
+			init="this setpos [23743.838, 17362.211, 0.5];";
 		};
 		class Item127
 		{
@@ -5457,18 +5451,18 @@ class Mission
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.60000002;
 			text="Insidekey";
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false;this addAction [""Unlock Base"", ""addons\Bases\adminbaseunlock.sqf""];this addAction [""Lock Base"", ""addons\Bases\adminbaselock.sqf""];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;";
 		};
 		class Item320
 		{
 			position[]={23892.377,3.1900001,17525.982};
-			azimut=123.53047;
+			azimut=123.53;
 			id=485;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.60000002;
 			text="Outsidekey";
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false;this addAction [""Unlock Base"", ""addons\Bases\adminbaseunlock.sqf""];this addAction [""Lock Base"", ""addons\Bases\adminbaselock.sqf""];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;";
 		};
 		class Item321
 		{
@@ -5599,7 +5593,7 @@ class Mission
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.40000001;
 			text="hangarlockoutside1";
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false; this addAction [""Unlock Hangar"", ""addons\Bases\hangarunlock.sqf""]; this addAction [""Lock Hangar"", ""addons\Bases\hangarlock.sqf""];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;";
 		};
 		class Item332
 		{
@@ -5610,7 +5604,7 @@ class Mission
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.40000001;
 			text="hangarlockoutside2";
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false; this addAction [""Unlock Hangar"", ""addons\Bases\hangarunlock.sqf""]; this addAction [""Lock Hangar"", ""addons\Bases\hangarlock.sqf""];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;";
 		};
 		class Item333
 		{
@@ -5621,7 +5615,7 @@ class Mission
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.40000001;
 			text="hangarlockinside1";
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false; this addAction [""Unlock Hangar"", ""addons\Bases\hangarunlock.sqf""]; this addAction [""Lock Hangar"", ""addons\Bases\hangarlock.sqf""];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;";
 		};
 		class Item334
 		{
@@ -5632,7 +5626,7 @@ class Mission
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.40000001;
 			text="hangarlockinside2";
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false; this addAction [""Unlock Hangar"", ""addons\Bases\hangarunlock.sqf""]; this addAction [""Lock Hangar"", ""addons\Bases\hangarlock.sqf""];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;";
 		};
 		class Item335
 		{
@@ -5877,90 +5871,90 @@ class Mission
 		class Item355
 		{
 			position[]={23818.076,3.1900001,17375.363};
-			azimut=125.45772;
+			azimut=125.458;
 			id=520;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.40000001;
 			text="nlukey1";
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;this setpos [23818.076, 17375.363, 0.00020885468];this addAction [""Unlock Hangar"", ""addons\Bases\nluhangarunlock.sqf""]; this addAction [""Lock Hangar"", ""addons\Bases\nluhangarlock.sqf""];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;";
 		};
 		class Item356
 		{
 			position[]={23821.109,3.1900001,17379.518};
-			azimut=125.45772;
+			azimut=125.458;
 			id=521;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.40000001;
 			text="nlukey2";
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;this setpos [23821.109, 17379.518, 4.1007996e-005];this addAction [""Unlock Hangar"", ""addons\Bases\nluhangarunlock.sqf""]; this addAction [""Lock Hangar"", ""addons\Bases\nluhangarlock.sqf""];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;";
 		};
 		class Item357
 		{
 			position[]={23855.266,3.1900001,17426.494};
-			azimut=125.45772;
+			azimut=125.458;
 			id=522;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.40000001;
 			text="nlukey3";
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;this setpos [23855.266, 17426.494, 3.0040741e-005];this addAction [""Unlock Hangar"", ""addons\Bases\nluhangarunlock.sqf""]; this addAction [""Lock Hangar"", ""addons\Bases\nluhangarlock.sqf""];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;";
 		};
 		class Item358
 		{
 			position[]={23858.422,3.1900001,17430.551};
-			azimut=125.45772;
+			azimut=125.458;
 			id=523;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.40000001;
 			text="nlukey4";
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;this setpos [23858.422, 17430.551, 5.865097e-005];this addAction [""Unlock Hangar"", ""addons\Bases\nluhangarunlock.sqf""]; this addAction [""Lock Hangar"", ""addons\Bases\nluhangarlock.sqf""];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;";
 		};
 		class Item359
 		{
 			position[]={23819.1,3.1900001,17374.715};
-			azimut=305.19308;
+			azimut=305.19299;
 			id=524;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.40000001;
 			text="nlukey5";
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;this setpos [23819.1, 17374.715, 7.5340271e-005];this addAction [""Unlock Hangar"", ""addons\Bases\nluhangarunlock.sqf""]; this addAction [""Lock Hangar"", ""addons\Bases\nluhangarlock.sqf""];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;";
 		};
 		class Item360
 		{
 			position[]={23821.74,3.1900001,17378.537};
-			azimut=305.19308;
+			azimut=305.19299;
 			id=525;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.40000001;
 			text="nlukey6";
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;this setpos [23821.74, 17378.537, 7.8678131e-005];this addAction [""Unlock Hangar"", ""addons\Bases\nluhangarunlock.sqf""]; this addAction [""Lock Hangar"", ""addons\Bases\nluhangarlock.sqf""];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;";
 		};
 		class Item361
 		{
 			position[]={23856.162,3.1900001,17425.795};
-			azimut=305.19308;
+			azimut=305.19299;
 			id=526;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.40000001;
 			text="nlukey7";
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;this setpos [23856.162, 17425.795, 3.1471252e-005];this addAction [""Unlock Hangar"", ""addons\Bases\nluhangarunlock.sqf""]; this addAction [""Lock Hangar"", ""addons\Bases\nluhangarlock.sqf""];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;";
 		};
 		class Item362
 		{
 			position[]={23858.922,3.1900001,17429.475};
-			azimut=305.19308;
+			azimut=305.19299;
 			id=527;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.40000001;
 			text="nlukey8";
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;this setpos [23858.922, 17429.475, 1.6689301e-005];this addAction [""Unlock Hangar"", ""addons\Bases\nluhangarunlock.sqf""]; this addAction [""Lock Hangar"", ""addons\Bases\nluhangarlock.sqf""];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;";
 		};
 		class Item363
 		{
@@ -6085,46 +6079,46 @@ class Mission
 		class Item373
 		{
 			position[]={23796.771,3.1900001,17454.982};
-			azimut=125.91247;
+			azimut=125.912;
 			id=538;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.40000001;
 			text="nlukey9";
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;this addAction [""Unlock Hangar"", ""addons\Bases\nluhangarunlock.sqf""]; this addAction [""Lock Hangar"", ""addons\Bases\nluhangarlock.sqf""];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;";
 		};
 		class Item374
 		{
 			position[]={23797.547,3.1900001,17454.41};
-			azimut=-55.191956;
+			azimut=-55.192001;
 			id=539;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.40000001;
 			text="nlukey10";
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;this addAction [""Unlock Hangar"", ""addons\Bases\nluhangarunlock.sqf""]; this addAction [""Lock Hangar"", ""addons\Bases\nluhangarlock.sqf""];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;";
 		};
 		class Item375
 		{
 			position[]={23800.166,3.1900001,17459.129};
-			azimut=125.91247;
+			azimut=125.912;
 			id=540;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.40000001;
 			text="nlukey11";
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;this setpos [23800.166, 17459.129, 9.5367432e-007];this addAction [""Unlock Hangar"", ""addons\Bases\nluhangarunlock.sqf""]; this addAction [""Lock Hangar"", ""addons\Bases\nluhangarlock.sqf""];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;";
 		};
 		class Item376
 		{
 			position[]={23800.941,3.1900001,17458.557};
-			azimut=-55.191956;
+			azimut=-55.192001;
 			id=541;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=0.40000001;
 			text="nlukey12";
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;this setpos [23800.941, 17458.557, 9.5367432e-007];this addAction [""Unlock Hangar"", ""addons\Bases\nluhangarunlock.sqf""]; this addAction [""Lock Hangar"", ""addons\Bases\nluhangarlock.sqf""];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;";
 		};
 		class Item377
 		{
@@ -6137,7 +6131,7 @@ class Mission
 			leader=1;
 			skill=0.60000002;
 			text="gate2";
-			init="this allowDamage false; this setVariable [""R3F_LOG_disabled"", true];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false;";
 		};
 		class Item378
 		{
@@ -9197,7 +9191,7 @@ class Mission
 			vehicle="Land_InfoStand_V1_F";
 			skill=1;
 			text="Shopkey";
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;this addAction [""Unlock Shops"", ""addons\Bases\adminbaseunlock.sqf""]; this addAction [""Lock Shops"", ""addons\Bases\adminbaselock.sqf""];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;";
 		};
 		class Item676
 		{
@@ -9224,18 +9218,18 @@ class Mission
 		class Item678
 		{
 			position[]={23735.225,3.1900001,17368.01};
-			azimut=-50.976837;
+			azimut=-50.976799;
 			id=843;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V1_F";
 			skill=1;
 			text="Shopkey_1";
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;this addAction [""Unlock Shops"", ""addons\Bases\adminbaseunlock.sqf""]; this addAction [""Lock Shops"", ""addons\Bases\adminbaselock.sqf""];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false;";
 		};
 	};
 	class Markers
 	{
-		items=198;
+		items=191;
 		class Item0
 		{
 			position[]={3612.1487,12.11851,13020.892};
@@ -10604,62 +10598,13 @@ class Mission
 		};
 		class Item178
 		{
-			position[]={3654.6921,10.495649,13082.084};
-			name="ATM1";
-			text="ATM";
-			type="mil_dot";
-		};
-		class Item179
-		{
-			position[]={9470.2266,118.18732,15930.6};
-			name="ATM3";
-			text="ATM";
-			type="mil_dot";
-		};
-		class Item180
-		{
-			position[]={16648.008,17.150076,16147.401};
-			name="ATM5";
-			text="ATM";
-			type="mil_dot";
-		};
-		class Item181
-		{
-			position[]={16763.867,12.516821,12506.801};
-			name="ATM7";
-			text="ATM";
-			type="mil_dot";
-		};
-		class Item182
-		{
-			position[]={25661.523,19.901751,21327.547};
-			name="ATM6";
-			text="ATM";
-			type="mil_dot";
-		};
-		class Item183
-		{
-			position[]={20797.355,41.883713,6662.9375};
-			name="ATM2";
-			text="ATM";
-			type="mil_dot";
-		};
-		class Item184
-		{
-			position[]={10341.32,125.32166,19047.426};
-			name="ATM4";
-			text="ATM";
-			type="mil_dot";
-		};
-		class Item185
-		{
 			position[]={23763.994,3.1900001,17376.666};
 			name="VehStore6_landSpawn";
 			type="Empty";
 			colorName="ColorBlack";
 			angle=400;
 		};
-		class Item186
+		class Item179
 		{
 			position[]={23785.307,3.1900001,17361.326};
 			name="VehStore6_heliSpawn";
@@ -10667,7 +10612,7 @@ class Mission
 			colorName="ColorBlack";
 			angle=400;
 		};
-		class Item187
+		class Item180
 		{
 			position[]={23773.934,3.1900001,17368.486};
 			name="VehStore6_planeSpawn";
@@ -10675,7 +10620,7 @@ class Mission
 			colorName="ColorBlack";
 			angle=400;
 		};
-		class Item188
+		class Item181
 		{
 			position[]={23754.244,3.1900001,17382.523};
 			name="GunStore5_objSpawn";
@@ -10683,7 +10628,7 @@ class Mission
 			colorName="ColorBlack";
 			angle=400;
 		};
-		class Item189
+		class Item182
 		{
 			position[]={23752.129,3.1900001,17379.498};
 			name="GenStore6_objSpawn";
@@ -10691,7 +10636,7 @@ class Mission
 			colorName="ColorBlack";
 			angle=400;
 		};
-		class Item190
+		class Item183
 		{
 			position[]={17417.816,13.29987,13212.462};
 			name="VehStore7_landSpawn";
@@ -10699,7 +10644,7 @@ class Mission
 			colorName="ColorBlack";
 			angle=44.645718;
 		};
-		class Item191
+		class Item184
 		{
 			position[]={17398.506,14.288633,13187.636};
 			name="VehStore7_heliSpawn";
@@ -10707,7 +10652,7 @@ class Mission
 			colorName="ColorBlack";
 			angle=-50.39447;
 		};
-		class Item192
+		class Item185
 		{
 			position[]={17509.982,13.177736,13226.296};
 			name="BFB";
@@ -10715,14 +10660,14 @@ class Mission
 			type="o_hq";
 			colorName="ColorWEST";
 		};
-		class Item193
+		class Item186
 		{
 			position[]={17454.506,15.000981,13109.804};
 			name="GenStore7_objSpawn";
 			type="Empty";
 			colorName="ColorBlack";
 		};
-		class Item194
+		class Item187
 		{
 			position[]={23062.262,3.1658325,19073.383};
 			name="ChopShop_Pad_Icon_1";
@@ -10731,7 +10676,7 @@ class Mission
 			colorName="ColorBlack";
 			angle=0.166327;
 		};
-		class Item195
+		class Item188
 		{
 			position[]={8966.9033,69.380547,15523.986};
 			name="ChopShop_Pad_Icon_2";
@@ -10740,7 +10685,7 @@ class Mission
 			colorName="ColorBlack";
 			angle=-159.657;
 		};
-		class Item196
+		class Item189
 		{
 			position[]={26829.258,26.734985,24452.74};
 			name="ChangeOwner_Pad_Icon_1";
@@ -10749,7 +10694,7 @@ class Mission
 			colorName="ColorBlack";
 			angle=42.63467;
 		};
-		class Item197
+		class Item190
 		{
 			position[]={11724.969,21.811064,11944.842};
 			name="ChangeOwner_Pad_Icon_1_1";
