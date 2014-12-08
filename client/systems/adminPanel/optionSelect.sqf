@@ -114,7 +114,7 @@ if (_uid call isAdmin) then
 				case 5: //Access personal ATM"
 				{
 					closeDialog 0;
-					execVM "addons\atm\ATM.sqf";
+					[player] call bank_menu_dialog;
 				};
 				case 6: //Show server FPS function
 				{
