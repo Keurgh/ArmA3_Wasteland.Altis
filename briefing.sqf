@@ -227,22 +227,26 @@ player createDiaryRecord ["changelog",
 "NL United",
 "
 <br/> [Added] Earplugs under the End key
-<br/> [Added] Chop Shop and Change Ownership scripts
+<br/> [Added] Chop Shop and Change Ownership
 <br/> [Added] Vehicle locking
 <br/> [Added] Locked vehicle break in at a cost
 <br/> [Added] Heal self script
 <br/> [Added] Access to DLC Helicopter pilot seat without DLC
 <br/> [Added] Patrol mission: Airport patrol
 <br/> [Added] Extra missions: Hostile Jet, Smugglers, Snipers & Hack laptop 
-<br/> [Added] Side mission: Town Takeover
 <br/> [Added] ATM's and showing bankmoney on HUD
 <br/> [Added] Blufor base for Blufor only
 <br/> [Added] Admin base in saltflats
 <br/> [Added] Intro script
+<br/> [Added] Player controlled IP camera's
+<br/> [Added] Device detector (IP Camera's & Spawn Beacons)
+<br/> [Added] Resupply truck
+<br/> [Added] Improved admin camera
 <br/> [Changed] Increased AI skill and accuracy 
-<br/> [Changed] Vehicle saving to 2*24 hours
-<br/> [Changed] Object saving to 5*24 hours
+<br/> [Changed] Vehicle saving to 5*24 hours
+<br/> [Changed] Object saving to 10*24 hours
 <br/> [Changed] Spawnbeacon insertion to 0 mtrs.
+<br/> [Changed] Locking sounds to global.
 <br/> [Server] Lobby idle kick after 15 minutes
 <br/> [Server] Max ping is 250
 "
