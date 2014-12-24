@@ -11,7 +11,9 @@ _vehicle = _nearvehicle select 0;
  {
     hint str _i;
 	player action ["lightOn", _vehicle];
-	_vehicle say3D "caralarm";
+	_soundPath = [(str missionConfigFile), 0, -15] call BIS_fnc_trimString;
+	_soundToPlay = _soundPath + "client\sounds\horn.ogg";
+	playSound3D [_soundToPlay, _vehicle, false, getPosASL _vehicle, 1, 1, 0];
     sleep 0.5;
 	player action ["lightOff", _vehicle];
 	sleep 0.5;
@@ -37,7 +39,9 @@ _vehicle = _nearvehicle select 0;
 	_vehicle setVariable ["objectLocked", false, true]; 
 	_vehicle setVariable ["R3F_LOG_disabled",false,true];
 		
-	_vehicle say3D "carlock";
+	_soundPath = [(str missionConfigFile), 0, -15] call BIS_fnc_trimString;
+	_soundToPlay = _soundPath + "client\sounds\carlock.ogg";
+	playSound3D [_soundToPlay, _vehicle, false, getPosASL _vehicle, 1, 1, 15];
 	player action ["lightOn", _vehicle];
 	sleep 0.5;
 	player action ["lightOff", _vehicle];

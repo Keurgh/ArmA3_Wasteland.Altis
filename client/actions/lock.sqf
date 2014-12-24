@@ -21,7 +21,9 @@ _vehicle = _nearvehicle select 0;
 	_vehicle setVariable ["objectLocked", true, true];
 	_vehicle setVariable ["R3F_LOG_disabled",true,true];
 		
-	_vehicle say3D "carlock";
+	_soundPath = [(str missionConfigFile), 0, -15] call BIS_fnc_trimString;
+	_soundToPlay = _soundPath + "client\sounds\carlock.ogg";
+	playSound3D [_soundToPlay, _vehicle, false, getPosASL _vehicle, 1, 1, 15];
 	_vehicle engineOn false;
 	player action ["lightOn", _vehicle];
 	sleep 0.5;

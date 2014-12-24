@@ -79,25 +79,3 @@ class CfgNotifications
 {
 	#include "client\CfgNotifications.hpp"
 };
-
-class CfgSounds
-{
-    sounds[] =
-	{
-		carlock, caralarm
-	};
-
-	class carlock
-	{
-		name = "carlock";
-		sound[] = {client\sounds\carlock.ogg,0.2,1};
-		titles[] = {};
-	};
-
-	class caralarm
-	{
-		name = "caralarm";
-		sound[] = {client\sounds\horn.ogg,0.9,1};
-		titles[] = {};
-	};
-};
