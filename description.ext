@@ -59,6 +59,10 @@ loadScreen = "mapConfig\Loading.jpg";
 
 #include "client\systems\hud\dialog\downloadData.hpp"
 
+#include "addons\cctv\ui.hpp"
+#include "addons\cctv\laptop_flat_menu.hpp"
+#include "addons\cctv\cctv_menu.hpp"
+
 class RscTitles
 {
 	#include "addons\proving_ground\PG_rsctitles.hpp"

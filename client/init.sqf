@@ -134,6 +134,7 @@ A3W_scriptThreads pushBack execVM "addons\Lootspawner\LSclientScan.sqf";
 [] execVM "addons\far_revive\FAR_revive_init.sqf";
 [] execVM "addons\camera\functions.sqf";			// Improved admin camera
 [] execVM "addons\bank\functions.sqf";				// ATM script
+[] execVM "addons\cctv\functions.sqf";				// CCTV Camera
 
 if (["A3W_teamPlayersMap"] call isConfigOn) then
 {
