@@ -57,7 +57,7 @@ if((player == driver _vehicle) && (!_eng))then {
 		
 			player setVariable["cmoney",(player getVariable "cmoney")-_price,true];
 			player setVariable["timesync",(player getVariable "timesync")+(_price * 3),true];
-			[] call fn_savePlayerData;
+			[] spawn fn_savePlayerData; // Changed call to spawn
 			["Changing ownership will take about 1 minute", 10] call mf_notify_client;
 			playSound "FD_Finish_F";
 			_vehicle setVelocity [0,0,0];
