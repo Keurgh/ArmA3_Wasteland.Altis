@@ -25,6 +25,9 @@ groupManagmentActive = false;
 pvar_PlayerTeamKiller = objNull;
 doCancelAction = false;
 
+//AJ Beacondetector
+BeaconScanInProgress = false;
+
 //Initialization Variables
 playerCompiledScripts = false;
 playerSetupComplete = false;
@@ -141,7 +144,7 @@ if (["A3W_teamPlayersMap"] call isConfigOn) then
 	[] execVM "client\functions\drawPlayerMarkers.sqf";
 };
 
-// update player's spawn beaoon
+// update player's spawn beacon
 {
 	if (_x getVariable ["ownerUID",""] == getPlayerUID player) then
 	{
