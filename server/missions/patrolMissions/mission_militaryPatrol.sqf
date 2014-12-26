@@ -1,7 +1,7 @@
 // ******************************************************************************************
 // * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
 // ******************************************************************************************
-//	@file Name: mission_airportPatrol.sqf
+//	@file Name: mission_mapPatrol.sqf
 //	@file Author: JoSchaap, AgentRev, LouD
 
 if (!isServer) exitwith {};
@@ -11,7 +11,7 @@ private ["_convoyVeh","_veh1","_veh2","_veh3","_veh4","_veh5","_veh6","_createVe
 
 _setupVars =
 {
-	_missionType = "Airport Patrol";
+	_missionType = "Military Patrol";
 	_locationsArray = PatrolConvoyPaths;
 };
 
@@ -144,7 +144,7 @@ _setupObjects =
 	_vehicleName2 = getText (configFile >> "CfgVehicles" >> _veh4 >> "displayName");
 	_vehicleName3 = getText (configFile >> "CfgVehicles" >> _veh5 >> "displayName");
 	
-	_missionHintText = format ["A convoy containing at least a <t color='%4'>%1</t>, a <t color='%4'>%2</t> and a <t color='%4'>%3</t> is patrolling the Airport! Stop the patrol and capture the goods and money!", _vehicleName, _vehicleName2, _vehicleName3, patrolMissionColor];
+	_missionHintText = format ["A convoy containing at least a <t color='%4'>%1</t>, a <t color='%4'>%2</t> and a <t color='%4'>%3</t> is patrolling a high value location! Stop the patrol and capture the goods and money!", _vehicleName, _vehicleName2, _vehicleName3, patrolMissionColor];
 
 	_numWaypoints = count waypoints _aiGroup;
 };
