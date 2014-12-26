@@ -9,12 +9,15 @@
 =======================================================================================================================
 */
 
-T8_varFileSize = 165072;  								// Filesize ... smaller files will take shorter time to download!
+_filesizeamountrandomizer = [123804,165072,206340];
+_filesize = _filesizeamountrandomizer call BIS_fnc_SelectRandom;
+
+T8_varFileSize = _filesize;  								// Filesize ... smaller files will take shorter time to download!
 
 T8_varTLine01 = "Download cancelled!";				// download aborted
 T8_varTLine02 = "Download already in progress by someone else!";			// download already in progress by someone else
 T8_varTLine03 = "Download started!";					// download started
-T8_varTLine04 = "Download finished! 10000$ added to your inventory!";				// download finished
+T8_varTLine04 = "Download finished! The money is added to your inventory!";				// download finished
 T8_varTLine05 = "##  Download Bank Account Data  ##";				// line for the addaction
 
 T8_varDiagAbort = false;
@@ -112,9 +115,12 @@ T8_fnc_ActionLaptop =
 				
 				_laptop setVariable [ "Done", true, true ];
 				
-				player setVariable ["cmoney", (player getVariable ["cmoney", 0]) + 10000, true];
+				_cashamountrandomizer = [10000,15000,20000,25000];
+				_cashamount = _cashamountrandomizer call BIS_fnc_SelectRandom;
 				
-				axeDiagLog = format ["%1 hacked laptop for %2 money", player, 10000];
+				player setVariable ["cmoney", (player getVariable ["cmoney", 0]) + _cashamount, true];
+				
+				axeDiagLog = format ["%1 hacked laptop for %2 money", player, _cashamount];
 				publicVariableServer "axeDiagLog";
 			};
 			
