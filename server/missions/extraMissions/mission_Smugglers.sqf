@@ -12,13 +12,13 @@ private ["_positions", "_smugglerVeh", "_vehicle1", "_vehicle2", "_boxes1", "_cu
 _setupVars =
 {
 	_missionType = "Weapon Smugglers";
-	_positions = [[12540.6,16320.7,0],[3060.51,13173.3,0],[23870.8,15973,0],[16128.1,16995.5,0],[16748.2,13640.6,0],[14025,12982.7,0],[21811.1,6011.82,0]];
 
-	_missionPos = _positions call BIS_fnc_SelectRandom;
+	_locationsArray = MissionSpawnMarkers;
 };
 
 _setupObjects =
 {
+	_missionPos = markerPos _missionLocation;
 	_smugglerVeh = ["B_G_Offroad_01_armed_F"] call BIS_fnc_selectRandom; 
 
 	_vehicle1 = [_smugglerVeh,[(_missionPos select 0) - 5, (_missionPos select 1) + 10,0],0.5,1,0,"NONE"] call createMissionVehicle;

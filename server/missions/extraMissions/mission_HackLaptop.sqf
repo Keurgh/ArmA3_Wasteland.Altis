@@ -7,18 +7,18 @@
 if (!isServer) exitwith {};
 #include "extraMissionDefines.sqf";
 
-private ["_positions", "_bunker", "_laptop", "_obj", "_randomGroup", "_vehicleName"];
+private ["_bunker", "_laptop", "_obj", "_randomGroup", "_vehicleName"];
 
 _setupVars =
 {
 	_missionType = "Enemy Laptop";
-	_positions = [[12540.6,16320.7,0],[3060.51,13173.3,0],[23870.8,15973,0],[16128.1,16995.5,0],[16748.2,13640.6,0],[14025,12982.7,0],[21811.1,6011.82,0]];
 
-	_missionPos = _positions call BIS_fnc_SelectRandom;
+	_locationsArray = MissionSpawnMarkers;
 };
 
 _setupObjects =
 {
+	_missionPos = markerPos _missionLocation;
 	_bunker = createVehicle ["Land_BagBunker_Small_F", [_missionPos select 0, _missionPos select 1], [], 0, "CAN COLLIDE"];
 
 	_missionPos = getPosASL _bunker;
