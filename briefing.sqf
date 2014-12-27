@@ -243,7 +243,7 @@ player createDiaryRecord ["changelog",
 <br/> [Added] Resupply truck
 <br/> [Added] Improved admin camera
 <br/> [Changed] Increased AI skill and accuracy 
-<br/> [Changed] Vehicle saving to 5*24 hours
+<br/> [Changed] Vehicle saving to 3*24 hours
 <br/> [Changed] Object saving to 10*24 hours
 <br/> [Changed] Spawnbeacon insertion to 0 mtrs.
 <br/> [Changed] Locking sounds to global.
