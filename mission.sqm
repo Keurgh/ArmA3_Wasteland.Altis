@@ -2845,13 +2845,13 @@ class Mission
 		class Item61
 		{
 			position[]={23786.939,3.1900001,17319.336};
-			azimut=578.76819;
+			azimut=578.76801;
 			id=226;
 			side="EMPTY";
 			vehicle="Land_i_Shed_Ind_F";
 			lock="UNLOCKED";
 			skill=0.40000001;
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false; this setpos [23786.939, 17319.336, 9.393692e-005];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this setpos [23786.939, 17319.336, 9.393692e-005];";
 		};
 		class Item62
 		{
@@ -2876,34 +2876,34 @@ class Mission
 		class Item64
 		{
 			position[]={23697.619,3.1900001,17387.5};
-			azimut=-321.78577;
+			azimut=-321.78601;
 			id=229;
 			side="EMPTY";
 			vehicle="Land_Airport_Tower_F";
 			skill=0.40000001;
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false; this setpos [23697.619, 17387.5, 17.979898];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this setpos [23697.619, 17387.5, 17.979898];";
 		};
 		class Item65
 		{
 			position[]={23809.125,3.1689992,17295.781};
-			azimut=35.653008;
+			azimut=35.653;
 			id=230;
 			side="EMPTY";
 			vehicle="Land_Cargo_Tower_V1_F";
 			lock="LOCKED";
 			skill=0.40000001;
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false; this setpos [23809.125, 17295.781, 0.00021100044];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this setpos [23809.125, 17295.781, 0.00021100044];";
 		};
 		class Item66
 		{
 			position[]={23908.494,3.1900001,17491.689};
-			azimut=-51.986549;
+			azimut=-51.9865;
 			id=231;
 			side="EMPTY";
 			vehicle="Land_Cargo_Tower_V1_F";
 			lock="LOCKED";
 			skill=0.40000001;
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false; this setpos [23908.494, 17491.689, 15.758845];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this setpos [23908.494, 17491.689, 15.758845];";
 		};
 		class Item67
 		{
@@ -2959,13 +2959,13 @@ class Mission
 		class Item72
 		{
 			position[]={23801.451,3.1900001,17527.523};
-			azimut=-141.61227;
+			azimut=-141.612;
 			id=237;
 			side="EMPTY";
 			vehicle="Land_Cargo_Tower_V1_F";
 			lock="LOCKED";
 			skill=0.40000001;
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false; this setpos [23801.451, 17527.523, 15.759071];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this setpos [23801.451, 17527.523, 15.759071];";
 		};
 		class Item73
 		{
@@ -4051,12 +4051,12 @@ class Mission
 		class Item181
 		{
 			position[]={23763.447,3.1900001,17339.588};
-			azimut=37.633339;
+			azimut=37.633301;
 			id=346;
 			side="EMPTY";
 			vehicle="Land_TentHangar_V1_F";
 			skill=0.40000001;
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false; this setpos [23763.447, 17339.588, 2.1457672e-005];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this setpos [23763.447, 17339.588, 2.1457672e-005];";
 		};
 		class Item182
 		{
@@ -4321,7 +4321,7 @@ class Mission
 		class Item208
 		{
 			position[]={23703.5,3.1900001,17389.65};
-			azimut=-51.898956;
+			azimut=-51.898998;
 			id=373;
 			side="EMPTY";
 			vehicle="Land_Offices_01_V1_F";
@@ -5192,12 +5192,12 @@ class Mission
 		class Item295
 		{
 			position[]={23891.57,3.1900001,17528.113};
-			azimut=37.345036;
+			azimut=37.345001;
 			id=460;
 			side="EMPTY";
 			vehicle="Land_BarGate_F";
 			skill=0.40000001;
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false; this setpos [23891.57, 17528.113, 1.3828278e-005];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this setpos [23891.57, 17528.113, 1.3828278e-005];";
 		};
 		class Item296
 		{
@@ -5348,22 +5348,22 @@ class Mission
 		class Item310
 		{
 			position[]={23885.063,3.1900001,17534.576};
-			azimut=217.43607;
+			azimut=217.436;
 			id=475;
 			side="EMPTY";
 			vehicle="Land_Sign_WarningMilitaryArea_F";
 			skill=0.40000001;
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false; this setpos [23885.063, 17534.576, -0.00010061264];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this setpos [23885.063, 17534.576, -0.00010061264];";
 		};
 		class Item311
 		{
 			position[]={23893.412,3.1900001,17527.963};
-			azimut=217.43607;
+			azimut=217.436;
 			id=476;
 			side="EMPTY";
 			vehicle="Land_Sign_WarningMilitaryArea_F";
 			skill=0.40000001;
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false; this setpos [23893.412, 17527.963, -1.9550323e-005];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this setpos [23893.412, 17527.963, -1.9550323e-005];";
 		};
 		class Item312
 		{
