@@ -14,32 +14,6 @@ LCK_admins = [
 	"76561197967203106"  // Craven
 ];
 
-LCK_nlunited = [
-	"76561197968317840", // LouD
-	"76561197967203106", // Craven
-	"76561197995969095", // Klompie88
-	"76561197960274786", // iNDope
-	"76561197980472554", // Piew
-	"76561198007346102", // HeavenHell
-	"76561198017572580", // KEOS
-	"76561198117317493", // XtremeB3
-	"76561198018379131", // LaZoRr
-	"76561198052069957", // Melvin
-	"76561197979730277", // Dimitri
-	"76561198016159328", // Kemosabeh
-	"76561198030932144", // Glennoz
-	"76561197989563790", // Jimmy
-	"76561197973824467", // Twistit
-	"76561198043552836", // Nitroade
-	"76561198082266108", // Remie
-	"76561197995955330", // Pvt. Murder
-	"76561198045856719", // Akame
-	"76561198022640664", // Rockslide
-	"76561197971344257", // KingoftheNOkill
-	"76561198122292581", // robert
-	"76561198072364116"  // Joshua
-];
-
 LCK_basekeys = ["Insidekey","Outsidekey"];
 LCK_shopkeys = ["Shopkey","Shopkey_1"];
 LCK_planekeys = ["planedoor00","planedoor01"];
@@ -276,7 +250,6 @@ showLockUnlockAdminHangarAction = {
 	
 LCK_Actions = {
 	private ["_unit"];
-	if ((getPlayerUID player) in LCK_nlunited) then {
 	_unit = _this select 0;
 	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_unlock.paa'/> Unlock base", LCK_Baseunlock, "", 1, false, false, "","(call showLockUnlockBaseAction)"];
 	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_lock.paa'/> Lock base", LCK_Baselock, "", 1, false, false, "","(call showLockUnlockBaseAction)"];
@@ -286,7 +259,7 @@ LCK_Actions = {
 	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_lock.paa'/> Lock plane doors", LCK_Planelock, "", 1, false, false, "","(call showLockUnlockPlaneAction)"];
 	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_unlock.paa'/> Unlock NLU Hangars", LCK_Hangarunlock, "", 1, false, false, "","(call showLockUnlockHangarAction)"];
 	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_lock.paa'/> Lock NLU Hangars", LCK_Hangarlock, "", 1, false, false, "","(call showLockUnlockHangarAction)"];
-	};
+	
 	if ((getPlayerUID player) in LCK_admins) then {
 	_unit = _this select 0;
 	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_unlock.paa'/> Unlock Admin Hangars", LCK_AdminHangarunlock, "", 1, false, false, "","(call showLockUnlockAdminHangarAction)"];
