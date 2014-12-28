@@ -9152,7 +9152,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=201;
+		items=217;
 		class Item0
 		{
 			position[]={3612.1487,12.11851,13020.892};
@@ -10695,6 +10695,118 @@ class Mission
 			name="Mission_30";
 			type="Empty";
 			colorName="ColorOrange";
+		};
+		class Item201
+		{
+			position[]={3870,16.210089,17470};
+			name="Town_31";
+			type="Empty";
+			colorName="ColorRed";
+		};
+		class Item202
+		{
+			position[]={10330,126.46013,19060};
+			name="Town_32";
+			type="Empty";
+			colorName="ColorRed";
+		};
+		class Item203
+		{
+			position[]={10460,86.863388,17290};
+			name="Town_33";
+			type="Empty";
+			colorName="ColorRed";
+		};
+		class Item204
+		{
+			position[]={12822,43.370003,19641};
+			name="Town_34";
+			type="Empty";
+			colorName="ColorRed";
+		};
+		class Item205
+		{
+			position[]={14455,19.764,17641};
+			name="Town_35";
+			type="Empty";
+			colorName="ColorRed";
+		};
+		class Item206
+		{
+			position[]={16656,17.52602,16127};
+			name="Town_36";
+			type="Empty";
+			colorName="ColorRed";
+		};
+		class Item207
+		{
+			position[]={12943,28.633358,15041};
+			name="Town_37";
+			type="Empty";
+			colorName="ColorRed";
+		};
+		class Item208
+		{
+			position[]={17848,2.004668,18118};
+			name="Town_38";
+			type="Empty";
+			colorName="ColorRed";
+		};
+		class Item209
+		{
+			position[]={11132,41.072723,14557};
+			name="Town_39";
+			type="Empty";
+			colorName="ColorRed";
+		};
+		class Item210
+		{
+			position[]={11770,12.930024,13700};
+			name="Town_40";
+			type="Empty";
+			colorName="ColorRed";
+		};
+		class Item211
+		{
+			position[]={10616,15.467348,12267};
+			name="Town_41";
+			type="Empty";
+			colorName="ColorRed";
+		};
+		class Item212
+		{
+			position[]={3720,11.128642,10241};
+			name="Town_42";
+			type="Empty";
+			colorName="ColorRed";
+		};
+		class Item213
+		{
+			position[]={3962,21.476824,11638};
+			name="Town_43";
+			type="Empty";
+			colorName="ColorRed";
+		};
+		class Item214
+		{
+			position[]={11750,52.485371,18252};
+			name="Town_44";
+			type="Empty";
+			colorName="ColorRed";
+		};
+		class Item215
+		{
+			position[]={7394,55.829334,15395};
+			name="Town_45";
+			type="Empty";
+			colorName="ColorRed";
+		};
+		class Item216
+		{
+			position[]={23193,14.190002,19977};
+			name="Town_46";
+			type="Empty";
+			colorName="ColorRed";
 		};
 	};
 	class Sensors
