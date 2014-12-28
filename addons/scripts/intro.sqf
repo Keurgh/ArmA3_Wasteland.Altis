@@ -8,7 +8,7 @@ _messages = [
 	["A3Wasteland", worldName],
 	["Teamspeak", "ts.nl-united.nl"],
 	["Website/Forums", "www.nl-united.nl"],
-	["Saving", "Check the briefing to see saving times."],
+	["Saving", "Check the changelog to see saving times."],
 	["ATM / Bank", "You can use any ATM found in Altis."],
 	["Earplugs", "Put in your earplugs by using the END key."]
 ];
