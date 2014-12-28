@@ -14,12 +14,6 @@ LCK_admins = [
 	"76561197967203106"  // Craven
 ];
 
-LCK_basekeys = ["Insidekey","Outsidekey"];
-LCK_shopkeys = ["Shopkey","Shopkey_1"];
-LCK_planekeys = ["planedoor00","planedoor01"];
-LCK_hangarkeys = ["nlukey1","nlukey2","nlukey3","nlukey4","nlukey5","nlukey6","nlukey7","nlukey8","nlukey9","nlukey10","nlukey11","nlukey12"];
-LCK_adminhangarkeys = ["hangarlockoutside1","hangarlockoutside2","hangarlockinside1","hangarlockinside2"];
-
 LCK_basearray = ["door1","door2","door3"];
 LCK_shoparray = ["nlushopdoor00","nlushopdoor01","nlushopdoor02"];
 LCK_planearray = ["planedoor00","planedoor01"];
@@ -210,16 +204,16 @@ arrays_intersect = {
 
 showLockUnlockBaseAction = {
 	private["_objects"];
-	_objects =(nearestObjects [player, ["Land_InfoStand_V1_F"], 3]);
-	if (not([_objects, LCK_basekeys] call arrays_intersect)) exitWith {false};
+	_objects =(nearestObjects [player, ["Land_Mil_WallBig_4m_F"], 3]);
+	if (not([_objects, LCK_basearray] call arrays_intersect)) exitWith {false};
 
 	(true)
 };
 
 showLockUnlockShopAction = {
 	private["_objects"];
-	_objects =(nearestObjects [player, ["Land_InfoStand_V1_F"], 3]);
-	if (not([_objects, LCK_shopkeys] call arrays_intersect)) exitWith {false};
+	_objects =(nearestObjects [player, ["Land_Mil_WallBig_4m_F"], 3]);
+	if (not([_objects, LCK_shoparray] call arrays_intersect)) exitWith {false};
 
 	(true)
 };
@@ -227,23 +221,23 @@ showLockUnlockShopAction = {
 showLockUnlockPlaneAction = {
 	private["_objects"];
 	_objects =(nearestObjects [player, ["Land_Mil_WallBig_4m_F"], 3]);
-	if (not([_objects, LCK_planekeys] call arrays_intersect)) exitWith {false};
+	if (not([_objects, LCK_planearray] call arrays_intersect)) exitWith {false};
 
 	(true)
 };
 
 showLockUnlockHangarAction = {
 	private["_objects"];
-	_objects =(nearestObjects [player, ["Land_InfoStand_V1_F"], 3]);
-	if (not([_objects, LCK_hangarkeys] call arrays_intersect)) exitWith {false};
+	_objects =(nearestObjects [player, ["Land_Mil_WallBig_4m_F"], 3]);
+	if (not([_objects, LCK_hangararray] call arrays_intersect)) exitWith {false};
 
 	(true)
 };
 
 showLockUnlockAdminHangarAction = {
 	private["_objects"];
-	_objects =(nearestObjects [player, ["Land_InfoStand_V1_F"], 3]);
-	if (not([_objects, LCK_adminhangarkeys] call arrays_intersect)) exitWith {false};
+	_objects =(nearestObjects [player, ["Land_Mil_WallBig_4m_F"], 3]);
+	if (not([_objects, LCK_adminhangararray] call arrays_intersect)) exitWith {false};
 
 	(true)
 };
