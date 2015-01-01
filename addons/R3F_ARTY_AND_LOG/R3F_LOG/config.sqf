@@ -118,6 +118,7 @@ R3F_LOG_CFG_objets_transportables =
 	["Kart_01_Base_F", 5],
 	["Quadbike_01_base_F", 10],
 	["Rubber_duck_base_F", 10],
+	["SDV_01_base_F", 15],
 	["UAV_01_base_F", 2],
 	["Land_BagBunker_Large_F", 10],
 	["Land_BagBunker_Small_F", 5],
