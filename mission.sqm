@@ -2817,7 +2817,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Hospital_main_F";
 			skill=0.40000001;
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false; this setpos [23901.895, 17471.346, -0.0011521326];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this setpos [23901.895, 17471.346, -0.0011521326];";
 		};
 		class Item59
 		{
@@ -2828,7 +2828,7 @@ class Mission
 			vehicle="Land_Hospital_side1_F";
 			skill=0.40000001;
 			ammo=0.89999998;
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false; this setpos [23901.93, 17471.293, 0.0001168251];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this setpos [23901.93, 17471.293, 0.0001168251];";
 		};
 		class Item60
 		{
@@ -2838,7 +2838,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Hospital_side2_F";
 			skill=0.40000001;
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false; this setpos [23901.92, 17471.4, 0.0001206398];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this setpos [23901.92, 17471.4, 0.0001206398];";
 		};
 		class Item61
 		{
@@ -2931,7 +2931,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Hospital_main_F";
 			skill=0.40000001;
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false; this setpos [23821.803, 17520.801, 2.3841858e-006];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this setpos [23821.803, 17520.801, 2.3841858e-006];";
 		};
 		class Item70
 		{
@@ -2942,7 +2942,7 @@ class Mission
 			vehicle="Land_Hospital_side1_F";
 			skill=0.40000001;
 			ammo=0.89999998;
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false; this setpos [23821.764, 17520.754, 0.00034332275];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this setpos [23821.764, 17520.754, 0.00034332275];";
 		};
 		class Item71
 		{
@@ -2952,7 +2952,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Hospital_side2_F";
 			skill=0.40000001;
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false; this setpos [23821.75, 17520.803, 0.00034713745];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this setpos [23821.75, 17520.803, 0.00034713745];";
 		};
 		class Item72
 		{
@@ -4324,7 +4324,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Offices_01_V1_F";
 			skill=0.40000001;
-			init="this setVariable [""R3F_LOG_disabled"", true]; this allowDamage false; this enableSimulation false; this setpos [23703.5, 17389.65, -1.6689301e-005];";
+			init="this setVariable [""R3F_LOG_disabled"", true]; this setpos [23703.5, 17389.65, -1.6689301e-005];";
 		};
 		class Item209
 		{
