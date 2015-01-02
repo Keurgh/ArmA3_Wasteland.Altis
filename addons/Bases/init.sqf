@@ -29,8 +29,9 @@ LCK_nlunited = [
 	"76561198045856719", // Akame
 	"76561198022640664", // Rockslide
 	"76561197971344257", // KingoftheNOkill
-	"76561198122292581", // robert
-	"76561198072364116"  // Joshua
+	"76561198122292581", // rob3rt
+	"76561198072364116", // Joshua
+	"76561198042152631"  // Arjan desktop 
 ];
 
 if ((getPlayerUID player) in LCK_nlunited) then {
