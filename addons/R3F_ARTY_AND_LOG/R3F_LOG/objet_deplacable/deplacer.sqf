@@ -26,7 +26,7 @@ else
 
 	R3F_LOG_objet_selectionne = objNull;
 
-	private ["_objet", "_isSwimming", "_est_calculateur", "_arme_principale", "_arme_principale_accessoires", "_arme_principale_magasines", "_action_menu_release_relative", "_action_menu_release_horizontal" , "_action_menu_45", "_action_menu_90", "_action_menu_180", "_azimut_canon", "_muzzles", "_magazine", "_ammo", "_adjustPOS"];
+	private ["_objet", "_isSwimming", "_est_calculateur", "_arme_principale", "_arme_principale_accessoires", "_arme_principale_magasines", "_action_menu_release_relative", "_action_menu_release_horizontal" , "_action_menu_45", "_action_menu_90", "_action_menu_180", "_azimut_canon", "_muzzles", "_magazine", "_ammo", "_adjustPOS","_IsProtected","_IsAllowed"];
 
 	_objet = _this select 0;
 	if(isNil {_objet getVariable "R3F_Side"}) then {
@@ -44,6 +44,26 @@ else
 	if(_tempVar) exitwith {
 		hint format["This object belongs to %1 and they're nearby you cannot take this.", _objet getVariable "R3F_Side"]; R3F_LOG_mutex_local_verrou = false;
 	};
+	
+	//Start donator part
+	_IsProtected = false;
+	_IsAllowed = false;
+	
+	{
+		if(((_objet distance getMarkerPos  (_x select 3)) <  (_x select 1))) then
+		{	
+			_IsProtected = true;			
+			if ((getPlayerUID player) in (_x select 5)) then {				
+				_IsAllowed = true;
+			};
+		};
+	} forEach call Donators;
+	
+	if ((_IsProtected) && !(_IsAllowed)) exitwith {	 
+		hint "This base is protected by donator status"; R3F_LOG_mutex_local_verrou = false;
+	};
+	//End donator part
+	
 	_objet setVariable ["R3F_Side", (playerSide), true];
 
 	// Si l'objet est un calculateur d'artillerie, on laisse le script spécialisé gérer

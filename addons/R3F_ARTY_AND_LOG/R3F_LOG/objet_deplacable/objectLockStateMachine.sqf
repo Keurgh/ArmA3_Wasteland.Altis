@@ -10,10 +10,29 @@ if(R3F_LOG_mutex_local_verrou) exitWith {
 	player globalChat STR_R3F_LOG_mutex_action_en_cours;
 };
 
-private["_locking", "_object", "_lockState", "_lockDuration", "_stringEscapePercent", "_iteration", "_unlockDuration", "_totalDuration", "_checks", "_success"];
+private["_locking", "_object", "_lockState", "_lockDuration", "_stringEscapePercent", "_iteration", "_unlockDuration", "_totalDuration", "_checks", "_success","_IsProtected","_IsAllowed"];
 
 _object = _this select 0;
 _lockState = _this select 3;
+
+//Start donator part
+_IsProtected = false;
+_IsAllowed = false;
+
+{
+	if(((_object distance getMarkerPos  (_x select 3)) <  (_x select 1))) then
+	{	
+		_IsProtected = true;			
+		if ((getPlayerUID player) in (_x select 5)) then {				
+			_IsAllowed = true;
+		};
+	};
+} forEach call Donators;
+
+if ((_IsProtected) && !(_IsAllowed)) exitwith {	 
+	hint "This base is protected by donator status"; R3F_LOG_mutex_local_verrou = false;
+};
+//End donator part
 
 _totalDuration = 0;
 _stringEscapePercent = "%";
