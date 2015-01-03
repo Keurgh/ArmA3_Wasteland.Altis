@@ -240,8 +240,8 @@ player createDiaryRecord ["changelog",
 <br/> [Added] Blufor base for Blufor only
 <br/> [Added] Admin base in saltflats
 <br/> [Added] Intro script
-<br/> [Added] Player controlled IP camera's
-<br/> [Added] Device detector (IP Camera's & Spawn Beacons)
+<br/> [Added] Player controlled IP cameras
+<br/> [Added] Device detector (IP Cameras and Spawn Beacons)
 <br/> [Added] Resupply truck
 <br/> [Added] Improved admin camera
 <br/> [Added] Donator bases with donator lock state
