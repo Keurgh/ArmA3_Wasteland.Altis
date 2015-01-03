@@ -235,7 +235,7 @@ player createDiaryRecord ["changelog",
 <br/> [Added] Heal self script
 <br/> [Added] Access to DLC Helicopter pilot seat without DLC
 <br/> [Added] Patrol mission: Airport patrol
-<br/> [Added] Extra missions: Hostile Jet, Smugglers, Snipers & Hack laptop 
+<br/> [Added] Extra missions: Hostile Jet, Smugglers, Snipers and Hack laptop 
 <br/> [Added] ATM's and showing bankmoney on HUD
 <br/> [Added] Blufor base for Blufor only
 <br/> [Added] Admin base in saltflats
