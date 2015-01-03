@@ -226,6 +226,8 @@ player createDiaryRecord ["changelog",
  [
 "NL United",
 "
+<br/> [Info] Vehicle saving is 2*24 hours if unused
+<br/> [Info] Object saving is 7*24 hours
 <br/> [Added] Earplugs under the End key
 <br/> [Added] Chop Shop and Change Ownership
 <br/> [Added] Vehicle locking
@@ -242,11 +244,11 @@ player createDiaryRecord ["changelog",
 <br/> [Added] Device detector (IP Camera's & Spawn Beacons)
 <br/> [Added] Resupply truck
 <br/> [Added] Improved admin camera
+<br/> [Added] Donator bases with donator lock state
 <br/> [Changed] Increased AI skill and accuracy 
-<br/> [Changed] Vehicle saving to 2*24 hours
-<br/> [Changed] Object saving to 10*24 hours
 <br/> [Changed] Spawnbeacon insertion to 0 mtrs.
 <br/> [Changed] Locking sounds to global.
+<br/> [Changed] Old R3F script to 3.1
 <br/> [Server] Lobby idle kick after 15 minutes
 <br/> [Server] Max ping is 250
 "
