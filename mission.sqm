@@ -19024,7 +19024,7 @@ class Mission
 		{
 			position[]={22147.391,3.253191,14472.621};
 			name="base4";
-			text="BASE 4 FOR RENT";
+			text="[TIL] BASE";
 			type="mil_dot";
 			colorName="ColorGUER";
 			angle=-3.8909242;
@@ -19091,7 +19091,7 @@ class Mission
 		{
 			position[]={12023.087,-0.047544695,25010.518};
 			name="rent";
-			text="BASE RENT: € t.b.d.";
+			text="BASE RENT: € 5 per month";
 			type="mil_box";
 			colorName="ColorWEST";
 			angle=-270;

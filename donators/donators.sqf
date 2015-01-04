@@ -9,7 +9,6 @@ Donators = compileFinal str
 			[			
 				"76561197968317840" // LouD
 			]
-			
 		],
 		[
 			[9201.78,11462.8,4.83028],
@@ -20,7 +19,6 @@ Donators = compileFinal str
 			[			
 				"76561197968317840" // LouD
 			]
-			
 		],
 		[
 			[10807.1,17555.2,7.50377],
@@ -31,7 +29,6 @@ Donators = compileFinal str
 			[			
 				"76561197968317840" // LouD
 			]
-			
 		],
 		[
 			[23734.1,16178.6,5.28792],
@@ -40,9 +37,14 @@ Donators = compileFinal str
 			"_Base4Marker",
 			"U_I_CombatUniform_tshirt",
 			[			
-				"76561197968317840" // LouD
+				"76561197968317840", // LouD
+				"76561198083639412", // [TIL] WarmasterStuvis
+				"76561197977255432", // [TIL] JesterGorky
+				"76561197993437773", // [TIL] Vicious
+				"76561198085562913", // [TIL] Mac
+				"76561198043592519", // [TIL] TheRoge
+				"76561197983946797"  // [TIL] Deadly Anteater
 			]
-			
 		],
 		[
 			[16854.6,21818.5,0.396514],
@@ -53,7 +55,6 @@ Donators = compileFinal str
 			[			
 				"76561197968317840" // LouD
 			]
-			
 		],
 		[
 			[25313.1,18765,15.2735],
@@ -64,7 +65,6 @@ Donators = compileFinal str
 			[			
 				"76561197968317840" // LouD
 			]
-			
 		]
 	];
 		
