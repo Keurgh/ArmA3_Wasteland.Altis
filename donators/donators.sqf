@@ -17,7 +17,12 @@ Donators = compileFinal str
 			"_Base2Marker",
 			"U_I_G_resistanceLeader_F",
 			[			
-				"76561197968317840" // LouD
+				"76561197968317840", // LouD
+				"76561198009424374", // SOE-BigWookie
+				"76561198021646783", // SOE-Cam
+				"76561197970379258", // SOE-Size9
+				"76561198073474254"  // SOE-Gecko
+
 			]
 		],
 		[
