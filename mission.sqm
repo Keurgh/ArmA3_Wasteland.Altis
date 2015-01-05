@@ -13460,8 +13460,8 @@ class Mission
 		class Item1103
 		{
 			position[]={22147.406,3.4565308,14463.12};
-			azimut=-3.8515775;
-			offsetY=9;
+			azimut=-3.8515799;
+			offsetY=10;
 			id=1268;
 			side="EMPTY";
 			vehicle="Land_Canal_Wall_10m_F";
