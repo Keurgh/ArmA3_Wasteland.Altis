@@ -19003,7 +19003,7 @@ class Mission
 		{
 			position[]={10813.464,146.57408,17568.117};
 			name="base3";
-			text="BASE 3 FOR RENT";
+			text="[TII] BASE";
 			type="mil_dot";
 			colorName="ColorGUER";
 		};
