@@ -9,16 +9,10 @@
 
 diag_log format["Loading NLU base script functions..."];
 
-LCK_admins = [
-	"76561197968317840", // LouD
-	"76561197967203106"  // Craven
-];
-
 LCK_basearray = ["door1","door2","door3"];
 LCK_shoparray = ["nlushopdoor00","nlushopdoor01","nlushopdoor02"];
 LCK_planearray = ["planedoor00","planedoor01"];
-LCK_hangararray = ["nluhangardoor11","nluhangardoor12","nluhangardoor13","nluhangardoor14","nluhangardoor15","nluhangardoor21","nluhangardoor22","nluhangardoor23","nluhangardoor24","nluhangardoor25","nluhangardoor31","nluhangardoor32","nluhangardoor33","nluhangardoor34","nluhangardoor35","nluhangardoor41","nluhangardoor42","nluhangardoor43","nluhangardoor44","nluhangardoor45","nluhangardoor51","nluhangardoor52","nluhangardoor53","nluhangardoor54","nluhangardoor55","nluhangardoor61","nluhangardoor62","nluhangardoor63","nluhangardoor64","nluhangardoor65"];
-LCK_adminhangararray = ["hangardoor11","hangardoor12","hangardoor13","hangardoor14","hangardoor15","hangardoor21","hangardoor22","hangardoor23","hangardoor24","hangardoor25"];
+LCK_hangararray = ["hangardoor11","hangardoor12","hangardoor13","hangardoor14","hangardoor15","hangardoor21","hangardoor22","hangardoor23","hangardoor24","hangardoor25","nluhangardoor11","nluhangardoor12","nluhangardoor13","nluhangardoor14","nluhangardoor15","nluhangardoor21","nluhangardoor22","nluhangardoor23","nluhangardoor24","nluhangardoor25","nluhangardoor31","nluhangardoor32","nluhangardoor33","nluhangardoor34","nluhangardoor35","nluhangardoor41","nluhangardoor42","nluhangardoor43","nluhangardoor44","nluhangardoor45","nluhangardoor51","nluhangardoor52","nluhangardoor53","nluhangardoor54","nluhangardoor55","nluhangardoor61","nluhangardoor62","nluhangardoor63","nluhangardoor64","nluhangardoor65"];
 
 LCK_Baseunlock = {
 	{ 
@@ -140,36 +134,6 @@ LCK_Hangarlock = {
 	hint format["Hangars are locked"];
 };
 
-LCK_AdminHangarunlock = {
-	{ 
-	private["_object_name", "_object"];
-	_object_name = _x;
-	_object = missionNamespace getvariable _object_name;
-
-	if (!isNil "_object" && {!isNull _object}) then {
-	 [[netId _object, true], "A3W_fnc_hideObjectGlobal", _object] call A3W_fnc_MP;
-	};
-     
-	} forEach LCK_adminhangararray;
-
-	hint format["Hangars are unlocked"];
-};
-
-LCK_AdminHangarlock = {
-	{ 
-	private["_object_name", "_object"];
-	_object_name = _x;
-	_object = missionNamespace getvariable _object_name;
-
-	if (!isNil "_object" && {!isNull _object}) then {
-	 [[netId _object, false], "A3W_fnc_hideObjectGlobal", _object] call A3W_fnc_MP;
-	};
-     
-	} forEach LCK_adminhangararray;
-
-	hint format["Hangars are locked"];
-};
-
 arrays_intersect = {
 	private["_arr1", "_arr2"];
 	_arr1 = _this select 0;
@@ -206,7 +170,6 @@ showLockUnlockBaseAction = {
 	private["_objects"];
 	_objects =(nearestObjects [player, ["Land_Mil_WallBig_4m_F"], 3]);
 	if (not([_objects, LCK_basearray] call arrays_intersect)) exitWith {false};
-
 	(true)
 };
 
@@ -214,7 +177,6 @@ showLockUnlockShopAction = {
 	private["_objects"];
 	_objects =(nearestObjects [player, ["Land_Mil_WallBig_4m_F"], 3]);
 	if (not([_objects, LCK_shoparray] call arrays_intersect)) exitWith {false};
-
 	(true)
 };
 
@@ -222,7 +184,6 @@ showLockUnlockPlaneAction = {
 	private["_objects"];
 	_objects =(nearestObjects [player, ["Land_Mil_WallBig_4m_F"], 3]);
 	if (not([_objects, LCK_planearray] call arrays_intersect)) exitWith {false};
-
 	(true)
 };
 
@@ -230,18 +191,9 @@ showLockUnlockHangarAction = {
 	private["_objects"];
 	_objects =(nearestObjects [player, ["Land_Mil_WallBig_4m_F"], 3]);
 	if (not([_objects, LCK_hangararray] call arrays_intersect)) exitWith {false};
-
 	(true)
 };
 
-showLockUnlockAdminHangarAction = {
-	private["_objects"];
-	_objects =(nearestObjects [player, ["Land_Mil_WallBig_4m_F"], 3]);
-	if (not([_objects, LCK_adminhangararray] call arrays_intersect)) exitWith {false};
-
-	(true)
-};
-	
 LCK_Actions = {
 	private ["_unit"];
 	_unit = _this select 0;
@@ -253,12 +205,6 @@ LCK_Actions = {
 	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_lock.paa'/> Lock plane doors", LCK_Planelock, "", 1, false, false, "","(call showLockUnlockPlaneAction)"];
 	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_unlock.paa'/> Unlock NLU Hangars", LCK_Hangarunlock, "", 1, false, false, "","(call showLockUnlockHangarAction)"];
 	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_lock.paa'/> Lock NLU Hangars", LCK_Hangarlock, "", 1, false, false, "","(call showLockUnlockHangarAction)"];
-	
-	if ((getPlayerUID player) in LCK_admins) then {
-	_unit = _this select 0;
-	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_unlock.paa'/> Unlock Admin Hangars", LCK_AdminHangarunlock, "", 1, false, false, "","(call showLockUnlockAdminHangarAction)"];
-	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_lock.paa'/> Lock Admin Hangars", LCK_AdminHangarlock, "", 1, false, false, "","(call showLockUnlockAdminHangarAction)"];
-	};
 };
 //=======================
 BaseLockInitialized = true;
