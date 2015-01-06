@@ -22,7 +22,6 @@ Donators = compileFinal str
 				"76561198021646783", // SOE-Cam
 				"76561197970379258", // SOE-Size9
 				"76561198073474254"  // SOE-Gecko
-
 			]
 		],
 		[
@@ -32,10 +31,7 @@ Donators = compileFinal str
 			"_Base3Marker",
 			"U_I_CombatUniform_tshirt",
 			[			
-				"76561197968317840", // LouD
-				"76561198021630490", // [TII] NuclearFart 
-				"76561198082966119", // [TII] G r o l s c h
-				"76561198070213258"  // [TII] tolowymozes 
+				"76561197968317840" // LouD
 			]
 		],
 		[
@@ -71,7 +67,10 @@ Donators = compileFinal str
 			"_Base6Marker",
 			"U_IG_Guerilla1_1",
 			[			
-				"76561197968317840" // LouD
+				"76561197968317840", // LouD
+				"76561198021630490", // [TII] NuclearFart 
+				"76561198082966119", // [TII] G r o l s c h
+				"76561198070213258"  // [TII] tolowymozes 
 			]
 		]
 	];
