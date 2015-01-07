@@ -7,7 +7,10 @@ Donators = compileFinal str
 			"_Base1Marker",
 			"U_IG_leader",
 			[			
-				"76561197968317840" // LouD
+				"76561197968317840", // LouD
+				"76561198172130281", // ICI SteveTheFarmer257
+				"76561198171627097", // ICI CrazyH0bo
+				"76561198039596696"  // ICI BDubzZz86
 			]
 		],
 		[
