@@ -36,20 +36,6 @@ else
 	_joueur = player;
 	_dir_joueur = getDir _joueur;
 	
-	if(isNil {_objet getVariable "R3F_Side"}) then {
-		_objet setVariable ["R3F_Side", (playerSide), true];
-	};
-	
-	_tempVar = false;
-	if(!isNil {_objet getVariable "R3F_Side"}) then {
-		if(playerSide != (_objet getVariable "R3F_Side")) then {
-			{if(side _x ==  (_objet getVariable "R3F_Side") && alive _x && _x distance _objet < 150) exitwith {_tempVar = true;};} foreach AllUnits;
-		};
-	};
-	if(_tempVar) exitwith {
-		hint format["This object belongs to %1 and they're nearby you cannot take this.", _objet getVariable "R3F_Side"]; R3F_LOG_mutex_local_verrou = false;
-	};
-
 	//Start donator part
 	_IsProtected = false;
 	_IsAllowed = false;
@@ -68,8 +54,6 @@ else
 		hint "This base is protected by donator status"; R3F_LOG_mutex_local_verrou = false;
 	};
 	//End donator part
-	
-	_objet setVariable ["R3F_Side", (playerSide), true];
 	
 	if (isNull (_objet getVariable ["R3F_LOG_est_transporte_par", objNull]) && (isNull (_objet getVariable ["R3F_LOG_est_deplace_par", objNull]) || (!alive (_objet getVariable ["R3F_LOG_est_deplace_par", objNull])) || (!isPlayer (_objet getVariable ["R3F_LOG_est_deplace_par", objNull])))) then
 	{
