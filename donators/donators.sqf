@@ -71,9 +71,10 @@ Donators = compileFinal str
 			"U_IG_Guerilla1_1",
 			[			
 				"76561197968317840", // LouD
-				"76561198021630490", // [TII] NuclearFart 
+				"76561198021630490", // [TII] NuclearFart
 				"76561198082966119", // [TII] G r o l s c h
-				"76561198070213258"  // [TII] tolowymozes 
+				"76561198070213258", // [TII] tolowymozes
+				"76561198040448185"  // [TII] JustRick
 			]
 		]
 	];
