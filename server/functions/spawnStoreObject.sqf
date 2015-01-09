@@ -193,6 +193,12 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 					{
 						_object setAmmoCargo 5;
 					};
+					
+					//Disable damage on store crate
+					case ({_object isKindOf _x} count ["Box_NATO_Ammo_F"] > 0):
+					{
+						_object allowDamage false;
+					};
 
 					// Add food to bought food sacks.
 					case ({_object isKindOf _x} count ["Land_Sacks_goods_F"] > 0):
