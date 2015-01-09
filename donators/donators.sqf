@@ -59,7 +59,10 @@ Donators = compileFinal str
 			"_Base5Marker",
 			"U_IG_Guerilla1_1",
 			[			
-				"76561197968317840" // LouD
+				"76561197968317840", // LouD
+				"76561198130337534", // [EXT] Redfield
+				"76561198124546512", // [EXT] Zenox
+				"76561198080172165"  // [EXT] Tronix
 			]
 		],
 		[

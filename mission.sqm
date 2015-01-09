@@ -19045,7 +19045,7 @@ class Mission
 		{
 			position[]={16881.191,11.020727,21787.711};
 			name="base5";
-			text="BASE 5 FOR RENT";
+			text="[EXT] BASE";
 			type="mil_dot";
 			colorName="ColorGUER";
 		};
