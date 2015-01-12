@@ -9,12 +9,20 @@
 
 diag_log format["Loading NLU base script functions..."];
 
-LCK_basearray = ["door1","door2","door3"];
-LCK_shoparray = ["nlushopdoor00","nlushopdoor01","nlushopdoor02"];
-LCK_planearray = ["planedoor00","planedoor01"];
-LCK_hangararray = ["hangardoor11","hangardoor12","hangardoor13","hangardoor14","hangardoor15","hangardoor21","hangardoor22","hangardoor23","hangardoor24","hangardoor25","nluhangardoor11","nluhangardoor12","nluhangardoor13","nluhangardoor14","nluhangardoor15","nluhangardoor21","nluhangardoor22","nluhangardoor23","nluhangardoor24","nluhangardoor25","nluhangardoor31","nluhangardoor32","nluhangardoor33","nluhangardoor34","nluhangardoor35","nluhangardoor41","nluhangardoor42","nluhangardoor43","nluhangardoor44","nluhangardoor45","nluhangardoor51","nluhangardoor52","nluhangardoor53","nluhangardoor54","nluhangardoor55","nluhangardoor61","nluhangardoor62","nluhangardoor63","nluhangardoor64","nluhangardoor65"];
+LCK_frontdoorarray = ["frontdoor1","frontdoor2","frontdoor3","frontdoor4"];
+LCK_backdoorarray = ["backdoor1","backdoor2","backdoor3","backdoor4"];
+LCK_shopdoorarray = ["shopdoor1","shopdoor2","shopdoor3"];
+LCK_hangar1 = ["h1door1","h1door2","h1door3","h1door4","h1door5","h1door6"];
+LCK_hangar2 = ["h2door1","h2door2","h2door3","h2door4","h2door5","h2door6"];
+LCK_hangar3 = ["h3door1","h3door2","h3door3","h3door4","h3door5","h3door6"];
+LCK_hangar4 = ["h4door1","h4door2","h4door3","h4door4","h4door5","h4door6"];
+LCK_hangar5 = ["h5door1","h5door2","h5door3","h5door4","h5door5","h5door6"];
+LCK_hangar6 = ["h6door1","h6door2","h6door3","h6door4","h6door5","h6door6"];
+LCK_hangar7 = ["h7door1","h7door2","h7door3","h7door4","h7door5","h7door6"];
+LCK_hangar8 = ["h8door1","h8door2","h8door3","h8door4","h8door5","h8door6"];
 
-LCK_Baseunlock = {
+
+LCK_Frontunlock = {
 	{ 
 	private["_object_name", "_object"];
 	_object_name = _x;
@@ -24,12 +32,12 @@ LCK_Baseunlock = {
 	 [[netId _object, true], "A3W_fnc_hideObjectGlobal", _object] call A3W_fnc_MP;
 	};
      
-	} forEach LCK_basearray;
+	} forEach LCK_frontdoorarray;
 
 	hint format["The base is unlocked"];
 };
 
-LCK_Baselock = {
+LCK_Frontlock = {
 	{ 
 	private["_object_name", "_object"];
 	_object_name = _x;
@@ -39,9 +47,39 @@ LCK_Baselock = {
 	 [[netId _object, false], "A3W_fnc_hideObjectGlobal", _object] call A3W_fnc_MP;
 	};
      
-	} forEach LCK_basearray;
+	} forEach LCK_frontdoorarray;
 
 	hint format["The base is locked"];
+};
+
+LCK_Backunlock = {
+	{ 
+	private["_object_name", "_object"];
+	_object_name = _x;
+	_object = missionNamespace getvariable _object_name;
+
+	if (!isNil "_object" && {!isNull _object}) then {
+	 [[netId _object, true], "A3W_fnc_hideObjectGlobal", _object] call A3W_fnc_MP;
+	};
+     
+	} forEach LCK_backdoorarray;
+
+	hint format["The plane doors are unlocked"];
+};
+
+LCK_Backlock = {
+	{ 
+	private["_object_name", "_object"];
+	_object_name = _x;
+	_object = missionNamespace getvariable _object_name;
+
+	if (!isNil "_object" && {!isNull _object}) then {
+	 [[netId _object, false], "A3W_fnc_hideObjectGlobal", _object] call A3W_fnc_MP;
+	};
+     
+	} forEach LCK_backdoorarray;
+
+	hint format["The plane doors are locked"];
 };
 
 LCK_Shopunlock = {
@@ -54,7 +92,7 @@ LCK_Shopunlock = {
 	 [[netId _object, true], "A3W_fnc_hideObjectGlobal", _object] call A3W_fnc_MP;
 	};
      
-	} forEach LCK_shoparray;
+	} forEach LCK_shopdoorarray;
 
 	hint format["The shops are unlocked"];
 };
@@ -69,12 +107,12 @@ LCK_Shoplock = {
 	 [[netId _object, false], "A3W_fnc_hideObjectGlobal", _object] call A3W_fnc_MP;
 	};
      
-	} forEach LCK_shoparray;
+	} forEach LCK_shopdoorarray;
 
 	hint format["The shops are locked"];
 };
 
-LCK_Planeunlock = {
+LCK_Hangar1unlock = {
 	{ 
 	private["_object_name", "_object"];
 	_object_name = _x;
@@ -84,42 +122,12 @@ LCK_Planeunlock = {
 	 [[netId _object, true], "A3W_fnc_hideObjectGlobal", _object] call A3W_fnc_MP;
 	};
      
-	} forEach LCK_planearray;
+	} forEach LCK_hangar1;
 
-	hint format["The plane doors are unlocked"];
+	hint format["The hangar is unlocked"];
 };
 
-LCK_Planelock = {
-	{ 
-	private["_object_name", "_object"];
-	_object_name = _x;
-	_object = missionNamespace getvariable _object_name;
-
-	if (!isNil "_object" && {!isNull _object}) then {
-	 [[netId _object, false], "A3W_fnc_hideObjectGlobal", _object] call A3W_fnc_MP;
-	};
-     
-	} forEach LCK_planearray;
-
-	hint format["The plane doors are locked"];
-};
-
-LCK_Hangarunlock = {
-	{ 
-	private["_object_name", "_object"];
-	_object_name = _x;
-	_object = missionNamespace getvariable _object_name;
-
-	if (!isNil "_object" && {!isNull _object}) then {
-	 [[netId _object, true], "A3W_fnc_hideObjectGlobal", _object] call A3W_fnc_MP;
-	};
-     
-	} forEach LCK_hangararray;
-
-	hint format["Hangars are unlocked"];
-};
-
-LCK_Hangarlock = {
+LCK_Hangar1lock = {
 	{
 	private["_object_name", "_object"];
 	_object_name = _x;
@@ -129,10 +137,221 @@ LCK_Hangarlock = {
 	 [[netId _object, false], "A3W_fnc_hideObjectGlobal", _object] call A3W_fnc_MP;
 	};
      
-	} forEach LCK_hangararray;
+	} forEach LCK_hangar1;
 
-	hint format["Hangars are locked"];
+	hint format["The hangar is locked"];
 };
+
+LCK_Hangar2unlock = {
+	{ 
+	private["_object_name", "_object"];
+	_object_name = _x;
+	_object = missionNamespace getvariable _object_name;
+
+	if (!isNil "_object" && {!isNull _object}) then {
+	 [[netId _object, true], "A3W_fnc_hideObjectGlobal", _object] call A3W_fnc_MP;
+	};
+     
+	} forEach LCK_hangar2;
+
+	hint format["The hangar is unlocked"];
+};
+
+LCK_Hangar2lock = {
+	{
+	private["_object_name", "_object"];
+	_object_name = _x;
+	_object = missionNamespace getvariable _object_name;
+
+	if (!isNil "_object" && {!isNull _object}) then {
+	 [[netId _object, false], "A3W_fnc_hideObjectGlobal", _object] call A3W_fnc_MP;
+	};
+     
+	} forEach LCK_hangar2;
+
+	hint format["The hangar is locked"];
+};
+
+LCK_Hangar3unlock = {
+	{ 
+	private["_object_name", "_object"];
+	_object_name = _x;
+	_object = missionNamespace getvariable _object_name;
+
+	if (!isNil "_object" && {!isNull _object}) then {
+	 [[netId _object, true], "A3W_fnc_hideObjectGlobal", _object] call A3W_fnc_MP;
+	};
+     
+	} forEach LCK_hangar3;
+
+	hint format["The hangar is unlocked"];
+};
+
+LCK_Hangar3lock = {
+	{
+	private["_object_name", "_object"];
+	_object_name = _x;
+	_object = missionNamespace getvariable _object_name;
+
+	if (!isNil "_object" && {!isNull _object}) then {
+	 [[netId _object, false], "A3W_fnc_hideObjectGlobal", _object] call A3W_fnc_MP;
+	};
+     
+	} forEach LCK_hangar3;
+
+	hint format["The hangar is locked"];
+};
+
+LCK_Hangar4unlock = {
+	{ 
+	private["_object_name", "_object"];
+	_object_name = _x;
+	_object = missionNamespace getvariable _object_name;
+
+	if (!isNil "_object" && {!isNull _object}) then {
+	 [[netId _object, true], "A3W_fnc_hideObjectGlobal", _object] call A3W_fnc_MP;
+	};
+     
+	} forEach LCK_hangar4;
+
+	hint format["The hangar is unlocked"];
+};
+
+LCK_Hangar4lock = {
+	{
+	private["_object_name", "_object"];
+	_object_name = _x;
+	_object = missionNamespace getvariable _object_name;
+
+	if (!isNil "_object" && {!isNull _object}) then {
+	 [[netId _object, false], "A3W_fnc_hideObjectGlobal", _object] call A3W_fnc_MP;
+	};
+     
+	} forEach LCK_hangar4;
+
+	hint format["The hangar is locked"];
+};
+
+LCK_Hangar5unlock = {
+	{ 
+	private["_object_name", "_object"];
+	_object_name = _x;
+	_object = missionNamespace getvariable _object_name;
+
+	if (!isNil "_object" && {!isNull _object}) then {
+	 [[netId _object, true], "A3W_fnc_hideObjectGlobal", _object] call A3W_fnc_MP;
+	};
+     
+	} forEach LCK_hangar5;
+
+	hint format["The hangar is unlocked"];
+};
+
+LCK_Hangar5lock = {
+	{
+	private["_object_name", "_object"];
+	_object_name = _x;
+	_object = missionNamespace getvariable _object_name;
+
+	if (!isNil "_object" && {!isNull _object}) then {
+	 [[netId _object, false], "A3W_fnc_hideObjectGlobal", _object] call A3W_fnc_MP;
+	};
+     
+	} forEach LCK_hangar5;
+
+	hint format["The hangar is locked"];
+};
+
+LCK_Hangar6unlock = {
+	{ 
+	private["_object_name", "_object"];
+	_object_name = _x;
+	_object = missionNamespace getvariable _object_name;
+
+	if (!isNil "_object" && {!isNull _object}) then {
+	 [[netId _object, true], "A3W_fnc_hideObjectGlobal", _object] call A3W_fnc_MP;
+	};
+     
+	} forEach LCK_hangar6;
+
+	hint format["The hangar is unlocked"];
+};
+
+LCK_Hangar6lock = {
+	{
+	private["_object_name", "_object"];
+	_object_name = _x;
+	_object = missionNamespace getvariable _object_name;
+
+	if (!isNil "_object" && {!isNull _object}) then {
+	 [[netId _object, false], "A3W_fnc_hideObjectGlobal", _object] call A3W_fnc_MP;
+	};
+     
+	} forEach LCK_hangar6;
+
+	hint format["The hangar is locked"];
+};
+
+LCK_Hangar7unlock = {
+	{ 
+	private["_object_name", "_object"];
+	_object_name = _x;
+	_object = missionNamespace getvariable _object_name;
+
+	if (!isNil "_object" && {!isNull _object}) then {
+	 [[netId _object, true], "A3W_fnc_hideObjectGlobal", _object] call A3W_fnc_MP;
+	};
+     
+	} forEach LCK_hangar7;
+
+	hint format["The hangar is unlocked"];
+};
+
+LCK_Hangar7lock = {
+	{
+	private["_object_name", "_object"];
+	_object_name = _x;
+	_object = missionNamespace getvariable _object_name;
+
+	if (!isNil "_object" && {!isNull _object}) then {
+	 [[netId _object, false], "A3W_fnc_hideObjectGlobal", _object] call A3W_fnc_MP;
+	};
+     
+	} forEach LCK_hangar7;
+
+	hint format["The hangar is locked"];
+};
+
+LCK_Hangar8unlock = {
+	{ 
+	private["_object_name", "_object"];
+	_object_name = _x;
+	_object = missionNamespace getvariable _object_name;
+
+	if (!isNil "_object" && {!isNull _object}) then {
+	 [[netId _object, true], "A3W_fnc_hideObjectGlobal", _object] call A3W_fnc_MP;
+	};
+     
+	} forEach LCK_hangar8;
+
+	hint format["The hangar is unlocked"];
+};
+
+LCK_Hangar8lock = {
+	{
+	private["_object_name", "_object"];
+	_object_name = _x;
+	_object = missionNamespace getvariable _object_name;
+
+	if (!isNil "_object" && {!isNull _object}) then {
+	 [[netId _object, false], "A3W_fnc_hideObjectGlobal", _object] call A3W_fnc_MP;
+	};
+     
+	} forEach LCK_hangar8;
+
+	hint format["The hangar is locked"];
+};
+
 
 arrays_intersect = {
 	private["_arr1", "_arr2"];
@@ -166,45 +385,118 @@ arrays_intersect = {
 	(_result)
 };
 
-showLockUnlockBaseAction = {
+showLockUnlockFrontAction = {
 	private["_objects"];
-	_objects =(nearestObjects [player, ["Land_Mil_WallBig_4m_F"], 3]);
-	if (not([_objects, LCK_basearray] call arrays_intersect)) exitWith {false};
+	_objects =(nearestObjects [player, ["Land_HBarrierWall_corridor_F"], 5]);
+	if (not([_objects, LCK_frontdoorarray] call arrays_intersect)) exitWith {false};
+	(true)
+};
+
+showLockUnlockBackAction = {
+	private["_objects"];
+	_objects =(nearestObjects [player, ["Land_HBarrierWall_corridor_F"], 5]);
+	if (not([_objects, LCK_backdoorarray] call arrays_intersect)) exitWith {false};
 	(true)
 };
 
 showLockUnlockShopAction = {
 	private["_objects"];
-	_objects =(nearestObjects [player, ["Land_Mil_WallBig_4m_F"], 3]);
-	if (not([_objects, LCK_shoparray] call arrays_intersect)) exitWith {false};
+	_objects =(nearestObjects [player, ["Land_Canal_WallSmall_10m_F"], 5]);
+	if (not([_objects, LCK_shopdoorarray] call arrays_intersect)) exitWith {false};
 	(true)
 };
 
-showLockUnlockPlaneAction = {
+showLockUnlockHangar1Action = {
 	private["_objects"];
-	_objects =(nearestObjects [player, ["Land_Mil_WallBig_4m_F"], 3]);
-	if (not([_objects, LCK_planearray] call arrays_intersect)) exitWith {false};
+	_objects =(nearestObjects [player, ["Land_Canal_WallSmall_10m_F"], 5]);
+	if (not([_objects, LCK_hangar1] call arrays_intersect)) exitWith {false};
 	(true)
 };
 
-showLockUnlockHangarAction = {
+showLockUnlockHangar2Action = {
 	private["_objects"];
-	_objects =(nearestObjects [player, ["Land_Mil_WallBig_4m_F"], 3]);
-	if (not([_objects, LCK_hangararray] call arrays_intersect)) exitWith {false};
+	_objects =(nearestObjects [player, ["Land_Canal_WallSmall_10m_F"], 5]);
+	if (not([_objects, LCK_hangar2] call arrays_intersect)) exitWith {false};
+	(true)
+};
+
+showLockUnlockHangar3Action = {
+	private["_objects"];
+	_objects =(nearestObjects [player, ["Land_Canal_WallSmall_10m_F"], 5]);
+	if (not([_objects, LCK_hangar3] call arrays_intersect)) exitWith {false};
+	(true)
+};
+
+showLockUnlockHangar4Action = {
+	private["_objects"];
+	_objects =(nearestObjects [player, ["Land_Canal_WallSmall_10m_F"], 5]);
+	if (not([_objects, LCK_hangar4] call arrays_intersect)) exitWith {false};
+	(true)
+};
+
+showLockUnlockHangar5Action = {
+	private["_objects"];
+	_objects =(nearestObjects [player, ["Land_Canal_WallSmall_10m_F"], 5]);
+	if (not([_objects, LCK_hangar5] call arrays_intersect)) exitWith {false};
+	(true)
+};
+
+showLockUnlockHangar6Action = {
+	private["_objects"];
+	_objects =(nearestObjects [player, ["Land_Canal_WallSmall_10m_F"], 5]);
+	if (not([_objects, LCK_hangar6] call arrays_intersect)) exitWith {false};
+	(true)
+};
+
+showLockUnlockHangar7Action = {
+	private["_objects"];
+	_objects =(nearestObjects [player, ["Land_Canal_WallSmall_10m_F"], 5]);
+	if (not([_objects, LCK_hangar7] call arrays_intersect)) exitWith {false};
+	(true)
+};
+
+showLockUnlockHangar8Action = {
+	private["_objects"];
+	_objects =(nearestObjects [player, ["Land_Canal_WallSmall_10m_F"], 5]);
+	if (not([_objects, LCK_hangar8] call arrays_intersect)) exitWith {false};
 	(true)
 };
 
 LCK_Actions = {
 	private ["_unit"];
 	_unit = _this select 0;
-	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_unlock.paa'/> Unlock base", LCK_Baseunlock, "", 1, false, false, "","(call showLockUnlockBaseAction)"];
-	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_lock.paa'/> Lock base", LCK_Baselock, "", 1, false, false, "","(call showLockUnlockBaseAction)"];
-	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_unlock.paa'/> Unlock shops", LCK_Shopunlock, "", 1, false, false, "","(call showLockUnlockShopAction)"];
-	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_lock.paa'/> Lock shops", LCK_Shoplock, "", 1, false, false, "","(call showLockUnlockShopAction)"];
-	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_unlock.paa'/> Unlock plane doors", LCK_Planeunlock, "", 1, false, false, "","(call showLockUnlockPlaneAction)"];
-	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_lock.paa'/> Lock plane doors", LCK_Planelock, "", 1, false, false, "","(call showLockUnlockPlaneAction)"];
-	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_unlock.paa'/> Unlock NLU Hangars", LCK_Hangarunlock, "", 1, false, false, "","(call showLockUnlockHangarAction)"];
-	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_lock.paa'/> Lock NLU Hangars", LCK_Hangarlock, "", 1, false, false, "","(call showLockUnlockHangarAction)"];
+	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_unlock.paa'/> Unlock frontdoor", LCK_Frontunlock, "", 1, false, false, "","(call showLockUnlockFrontAction)"];
+	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_lock.paa'/> Lock frontdoor", LCK_Frontlock, "", 1, false, false, "","(call showLockUnlockFrontAction)"];
+	
+	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_unlock.paa'/> Unlock backdoor", LCK_Backunlock, "", 1, false, false, "","(call showLockUnlockBackAction)"];
+	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_lock.paa'/> Lock backdoor", LCK_Backlock, "", 1, false, false, "","(call showLockUnlockBackAction)"];
+	
+	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_unlock.paa'/> Unlock shop", LCK_Shopunlock, "", 1, false, false, "","(call showLockUnlockShopAction)"];
+	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_lock.paa'/> Lock shop", LCK_Shoplock, "", 1, false, false, "","(call showLockUnlockShopAction)"];
+
+	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_unlock.paa'/> Unlock hangar", LCK_Hangar1unlock, "", 1, false, false, "","(call showLockUnlockHangar1Action)"];
+	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_lock.paa'/> Lock hangar", LCK_Hangar1lock, "", 1, false, false, "","(call showLockUnlockHangar1Action)"];
+
+	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_unlock.paa'/> Unlock hangar", LCK_Hangar2unlock, "", 1, false, false, "","(call showLockUnlockHangar2Action)"];
+	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_lock.paa'/> Lock hangar", LCK_Hangar2lock, "", 1, false, false, "","(call showLockUnlockHangar2Action)"];	
+	
+	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_unlock.paa'/> Unlock hangar", LCK_Hangar3unlock, "", 1, false, false, "","(call showLockUnlockHangar3Action)"];
+	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_lock.paa'/> Lock hangar", LCK_Hangar3lock, "", 1, false, false, "","(call showLockUnlockHangar3Action)"];
+
+	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_unlock.paa'/> Unlock hangar", LCK_Hangar4unlock, "", 1, false, false, "","(call showLockUnlockHangar4Action)"];
+	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_lock.paa'/> Lock hangar", LCK_Hangar4lock, "", 1, false, false, "","(call showLockUnlockHangar4Action)"];
+
+	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_unlock.paa'/> Unlock hangar", LCK_Hangar5unlock, "", 1, false, false, "","(call showLockUnlockHangar5Action)"];
+	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_lock.paa'/> Lock hangar", LCK_Hangar5lock, "", 1, false, false, "","(call showLockUnlockHangar5Action)"];
+
+	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_unlock.paa'/> Unlock hangar", LCK_Hangar6unlock, "", 1, false, false, "","(call showLockUnlockHangar6Action)"];
+	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_lock.paa'/> Lock hangar", LCK_Hangar6lock, "", 1, false, false, "","(call showLockUnlockHangar6Action)"];
+
+	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_unlock.paa'/> Unlock hangar", LCK_Hangar7unlock, "", 1, false, false, "","(call showLockUnlockHangar7Action)"];
+	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_lock.paa'/> Lock hangar", LCK_Hangar7lock, "", 1, false, false, "","(call showLockUnlockHangar7Action)"];
+
+	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_unlock.paa'/> Unlock hangar", LCK_Hangar8unlock, "", 1, false, false, "","(call showLockUnlockHangar8Action)"];
+	_unit addAction ["<t color=""#00FFFF""><img image='client\icons\r3f_lock.paa'/> Lock hangar", LCK_Hangar8lock, "", 1, false, false, "","(call showLockUnlockHangar8Action)"];
 };
 //=======================
 BaseLockInitialized = true;
