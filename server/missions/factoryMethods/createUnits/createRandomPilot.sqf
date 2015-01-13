@@ -34,6 +34,9 @@ sleep 0.1; // Without this delay, headgear doesn't get removed properly
 removeAllAssignedItems _soldier;
 _soldier addHeadgear "H_PilotHelmetHeli_B";
 
+_soldier spawn refillPrimaryAmmo;
+_soldier call setMissionSkill;
+
 _soldier addEventHandler ["Killed", server_playerDied];
 
 _soldier
